@@ -2,34 +2,35 @@ import React, { useState, useEffect } from 'react';
 import {
   AppBar,
   Toolbar,
-  Button,
   IconButton,
   Drawer,
   MenuItem,
 } from '@material-ui/core';
 import MenuIcon from '@material-ui/icons/Menu';
 import PropTypes from 'prop-types';
-import { Link } from 'react-router-dom';
-import logo from '../../assets/logo.png';
+import Scroll from 'react-scroll';
+import logo from '../../assets/logo2.png';
 import useStyles from './Header.styles';
+
+const { Link } = Scroll;
 
 const headersData = [
   {
     label: 'Portfolio',
-    href: '/portfolio',
+    href: 'portfolio',
   },
   {
     label: 'About',
-    href: '/about',
+    href: 'about',
   },
   {
     label: 'Contact',
-    href: '/contact',
+    href: 'contact',
   },
 ];
 
 const Header = ({ props }) => {
-  const styles = useStyles(props);
+  const classes = useStyles(props);
 
   const [view, setView] = useState({
     mobileView: false,
@@ -47,18 +48,21 @@ const Header = ({ props }) => {
   }, []);
 
   const getMenuButtons = () => headersData.map(({ label, href }) => (
-    <Button
+    <Link
       key={label}
       to={href}
-      component={Link}
-      className={styles.menuButton}
+      spy
+      smooth
+      offset={-70}
+      duration={500}
+      className={classes.menuButton}
     >
       {label}
-    </Button>
+    </Link>
   ));
 
   const displayDesktop = () => (
-    <Toolbar className={styles.toolbar}>
+    <Toolbar className={classes.toolbar}>
       <img src={logo} alt="Logo" />
       <div>{getMenuButtons()}</div>
     </Toolbar>
@@ -67,9 +71,12 @@ const Header = ({ props }) => {
   const getDrawerChoices = () => headersData.map(({ label, href }) => (
     <Link
       key={label}
-      component={Link}
       to={href}
-      className={styles.mobileMenuButton}
+      spy
+      smooth
+      offset={-70}
+      duration={500}
+      className={classes.mobileMenuButton}
     >
       <MenuItem>{label}</MenuItem>
     </Link>
@@ -95,7 +102,7 @@ const Header = ({ props }) => {
           open={drawerOpen}
           onClose={handleDrawerClose}
         >
-          <div className={styles.drawerContainer}>{getDrawerChoices()}</div>
+          <div className={classes.drawerContainer}>{getDrawerChoices()}</div>
         </Drawer>
       </Toolbar>
     );
@@ -103,7 +110,7 @@ const Header = ({ props }) => {
 
   return (
     <header>
-      <AppBar className={styles.root}>
+      <AppBar className={classes.root}>
         {mobileView ? displayMobile() : displayDesktop()}
       </AppBar>
     </header>

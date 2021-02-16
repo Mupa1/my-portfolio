@@ -12,10 +12,10 @@ const useStyles = makeStyles(() => ({
     },
   },
   menuButton: {
-    fontFamily: 'Open Sans, sans-serif',
     fontWeight: 700,
     size: '18px',
     marginLeft: '38px',
+    color: '#344563',
   },
   mobileMenuButton: {
     borderBottom: '1px solid #344563',
