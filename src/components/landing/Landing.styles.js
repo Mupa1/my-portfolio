@@ -19,18 +19,16 @@ const useStyles = makeStyles(() => ({
     '@media (max-width: 900px)': {
       padding: '0 10px',
     },
-  },
-  mainH1: {
-    fontWeight: 'bold',
-    '@media (max-width: 600px)': {
-      marginTop: '-20px',
+
+    '@media (max-width: 320px)': {
+      marginTop: '-50px',
     },
   },
   spacing: {
     padding: '20px 0',
   },
   connect: {
-    color: '#7F8CFF',
+    color: '#6070FF',
   },
   socialIcons: {
     color: '#344563',

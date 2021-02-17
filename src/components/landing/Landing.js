@@ -20,7 +20,7 @@ const Landing = ({ props }) => {
 
   const landingInfo = () => (
     <ThemeProvider theme={theme}>
-      <Typography variant="h3" component="h1" className={`${classes.mainH1} ${classes.spacing}`}>
+      <Typography variant="h3" component="h1" className={classes.spacing}>
         Hey There.
         <br />
         {' '}
@@ -59,7 +59,7 @@ const Landing = ({ props }) => {
     <section className={classes.root}>
       <article className={classes.landingInfo}>
         {landingInfo()}
-        <p className={classes.intro3}> I can help you build a product, feature, or website. Look through some of my work and experiences! If you like what you see and have a project you need to be coded, don&apos;t hesitate to contact me. </p>
+        <p> I enjoy building beautiful, user-friendly websites and web applications. Look through some of my work and experiences! If you like what you see and have a project you need to be coded, don&apos;t hesitate to contact me. </p>
         <p className={classes.connect}>LETS CONNECT</p>
         <ul>{getSocialIcons()}</ul>
       </article>
