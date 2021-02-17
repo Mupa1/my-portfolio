@@ -1,3 +1,4 @@
+/* eslint-disable comma-dangle */
 /* eslint-disable max-len */
 import React from 'react';
 import PropTypes from 'prop-types';
@@ -20,7 +21,7 @@ const Landing = ({ props }) => {
 
   const landingInfo = () => (
     <ThemeProvider theme={theme}>
-      <Typography variant="h3" component="h1" className={classes.spacing}>
+      <Typography variant="h3" component="h1" className={classes.spacing} style={{ fontWeight: 'bold', }}>
         Hey There.
         <br />
         {' '}

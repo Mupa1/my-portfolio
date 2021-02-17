@@ -38,7 +38,7 @@ const Portfolio = ({ props }) => {
               <Grid item xs={12} md={6} container>
                 <Grid item xs container direction="column" spacing={2}>
                   <Grid item xs>
-                    <Typography gutterBottom variant="h4" component="h2">
+                    <Typography gutterBottom variant="h4" component="h2" style={{ fontWeight: 'bold', }}>
                       Tasty Recipes
                     </Typography>
                     <Typography variant="body1" gutterBottom>
@@ -65,8 +65,8 @@ const Portfolio = ({ props }) => {
                           Live
                         </StyledButton>
                       </ExternalLink>
-                      <ExternalLink>
-                        <StyledButton className={classes.techStack} href="https://github.com/Mupa1/tasty-recipes">
+                      <ExternalLink href="https://github.com/Mupa1/tasty-recipes">
+                        <StyledButton className={classes.techStack} h>
                           Source
                         </StyledButton>
                       </ExternalLink>
