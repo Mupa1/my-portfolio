@@ -16,8 +16,8 @@ const { Link } = Scroll;
 
 const headersData = [
   {
-    label: 'Portfolio',
-    href: 'portfolio',
+    label: 'Projects',
+    href: 'projects',
   },
   {
     label: 'About',

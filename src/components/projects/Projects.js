@@ -4,16 +4,16 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import { ExternalLink } from 'react-external-link';
 import { Element } from 'react-scroll';
+import GitHubIcon from '@material-ui/icons/GitHub';
+import VisibilityIcon from '@material-ui/icons/Visibility';
 import {
   Grid, Paper, Typography, ButtonBase, Button,
 } from '@material-ui/core';
 import { createMuiTheme, ThemeProvider } from '@material-ui/core/styles';
-
-import { useStyles, StyledButton } from './Portfolio.styles';
-
+import { useStyles, StyledButton } from './Projects.styles';
 import tastyRecipes from '../../assets/tastyRecipes.png';
 
-const Portfolio = ({ props }) => {
+const Projects = ({ props }) => {
   const classes = useStyles(props);
   const theme = createMuiTheme({
     palette: {
@@ -24,9 +24,18 @@ const Portfolio = ({ props }) => {
     },
   });
 
+  // const projectsData = [
+  //   {
+  //     imageSrc: tastyRecipes,
+  //     title: 'Tasty Recipes',
+  //     description: 'A single page application that fetches recipe data from Spoonacular API and stores it in the redux store. Then the UI renders the recipes based on the data in the store.',
+  //     techStack: []
+  //   }
+  // ];
+
   return (
     <section>
-      <Element id="portfolio" name="portfolio">
+      <Element id="projects" name="projects">
         <article className={classes.root}>
           <Paper className={classes.paper}>
             <Grid container spacing={2}>
@@ -61,12 +70,12 @@ const Portfolio = ({ props }) => {
                   <Grid item xs>
                     <ThemeProvider theme={theme}>
                       <ExternalLink href="https://tasty-yummy-recipes-app.netlify.app/">
-                        <StyledButton className={classes.techStack}>
-                          Live
+                        <StyledButton className={classes.techStack} endIcon={<VisibilityIcon />}>
+                          See Live
                         </StyledButton>
                       </ExternalLink>
                       <ExternalLink href="https://github.com/Mupa1/tasty-recipes">
-                        <StyledButton className={classes.techStack} h>
+                        <StyledButton className={classes.techStack} endIcon={<GitHubIcon />}>
                           Source
                         </StyledButton>
                       </ExternalLink>
@@ -82,12 +91,12 @@ const Portfolio = ({ props }) => {
   );
 };
 
-Portfolio.defaultProps = {
+Projects.defaultProps = {
   props: () => { },
 };
 
-Portfolio.propTypes = {
+Projects.propTypes = {
   props: PropTypes.func,
 };
 
-export default Portfolio;
+export default Projects;

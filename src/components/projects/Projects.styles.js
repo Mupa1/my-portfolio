@@ -3,9 +3,9 @@ import { makeStyles, withStyles, Button } from '@material-ui/core';
 export const useStyles = makeStyles(theme => ({
   root: {
     flexGrow: 1,
-    padding: '100px',
+    padding: '100px 100px 0 100px',
     '@media (max-width: 900px)': {
-      padding: '100px 10px',
+      padding: '100px 10px 0 10px',
     },
   },
   paper: {
@@ -14,6 +14,11 @@ export const useStyles = makeStyles(theme => ({
     // maxWidth: 500,
     // height: '496px',
     borderRadius: '24px',
+    transition: 'all 0.3s',
+    '&:hover': {
+      boxShadow: '0px 8px 32px rgba(64, 83, 252, 0.24)',
+      border: '1px solid #6070FF',
+    },
   },
   image: {
     width: '100%',

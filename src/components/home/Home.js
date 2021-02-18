@@ -2,7 +2,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import Header from '../header/Header';
-import Portfolio from '../portfolio/Portfolio';
+import Portfolio from '../projects/Projects';
 import Landing from '../landing/Landing';
 import useStyles from './Home.styles';
 
