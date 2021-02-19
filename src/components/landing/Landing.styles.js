@@ -11,7 +11,7 @@ const useStyles = makeStyles(() => ({
     backgroundPosition: 'center',
     backgroundSize: 'cover',
     backgroundRepeat: 'no-repeat',
-    borderBottomLeftRadius: '50px',
+    borderBottomLeftRadius: '80px',
     '@media (max-width: 900px)': {
       height: 'auto',
     },

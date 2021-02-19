@@ -2,6 +2,7 @@
 /* eslint-disable max-len */
 import React from 'react';
 import PropTypes from 'prop-types';
+import { v4 as uuidv4 } from 'uuid';
 import { ExternalLink } from 'react-external-link';
 import {
   createMuiTheme, responsiveFontSizes, ThemeProvider,
@@ -49,7 +50,7 @@ const Landing = ({ props }) => {
   ];
 
   const getSocialIcons = () => socialIcons.map(({ icon, href }) => (
-    <li key={icon}>
+    <li key={uuidv4()}>
       <ExternalLink href={href} className={classes.socialIcons}>
         {icon}
       </ExternalLink>
