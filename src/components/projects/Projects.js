@@ -21,7 +21,7 @@ const Projects = ({ props }) => {
   ));
 
   return (
-    <section>
+    <section className={classes.root}>
       <Element id="projects" name="projects">
         <>{getProjectDetails()}</>
       </Element>

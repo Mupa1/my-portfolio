@@ -8,7 +8,7 @@ const useStyles = makeStyles(() => ({
     backgroundColor: '#fff',
     backgroundImage: `url(${landingBg})`,
     height: '80vh',
-    backgroundPosition: 'center',
+    // backgroundPosition: 'center',
     backgroundSize: 'cover',
     backgroundRepeat: 'no-repeat',
     borderBottomLeftRadius: '80px',

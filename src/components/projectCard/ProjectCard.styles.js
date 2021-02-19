@@ -11,13 +11,10 @@ export const useStyles = makeStyles(theme => ({
   paper: {
     padding: theme.spacing(2),
     margin: 'auto',
-    // maxWidth: 500,
-    // height: '496px',
     borderRadius: '24px',
     transition: 'all 0.3s',
     '&:hover': {
-      boxShadow: '0px 8px 32px rgba(64, 83, 252, 0.24)',
-      border: '1px solid #6070FF',
+      boxShadow: '10px 10px 30px 10px rgba(0, 0, 0, 12%)',
     },
   },
   image: {

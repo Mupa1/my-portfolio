@@ -5,6 +5,7 @@ import Header from '../header/Header';
 import Portfolio from '../projects/Projects';
 import Landing from '../landing/Landing';
 import useStyles from './Home.styles';
+import Footer from '../footer/Footer';
 
 const Home = ({ props }) => {
   const classes = useStyles(props);
@@ -14,6 +15,7 @@ const Home = ({ props }) => {
       <Header />
       <Landing />
       <Portfolio />
+      <Footer />
     </section>
   );
 };
