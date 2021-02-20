@@ -5,7 +5,8 @@ import PropTypes from 'prop-types';
 import { Typography } from '@material-ui/core';
 import { createMuiTheme, ThemeProvider } from '@material-ui/core/styles';
 import axios from 'axios';
-import { useStyles, StyledButton } from './ContactForm.styles';
+import useStyles from './ContactForm.styles';
+import StyledButton from '../StyledButton/StyledButton';
 
 const ContactForm = ({ props }) => {
   const [serverState, setServerState] = useState({

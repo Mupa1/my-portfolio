@@ -8,7 +8,8 @@ import {
   Grid, Paper, Typography, ButtonBase,
 } from '@material-ui/core';
 import { createMuiTheme, ThemeProvider } from '@material-ui/core/styles';
-import { useStyles, StyledButton } from './ProjectCard.styles';
+import useStyles from './ProjectCard.styles';
+import StyledButton from '../StyledButton/StyledButton';
 
 const ProjectCard = ({ props, project, techStack }) => {
   const {

@@ -2,18 +2,14 @@
 /* eslint-disable max-len */
 import React from 'react';
 import PropTypes from 'prop-types';
-import { v4 as uuidv4 } from 'uuid';
-import { ExternalLink } from 'react-external-link';
 import {
   createMuiTheme, responsiveFontSizes, ThemeProvider,
 } from '@material-ui/core/styles';
 import {
   Typography,
 } from '@material-ui/core';
-import LinkedInIcon from '@material-ui/icons/LinkedIn';
-import GitHubIcon from '@material-ui/icons/GitHub';
-import TwitterIcon from '@material-ui/icons/Twitter';
 import useStyles from './Landing.styles';
+import SocialIcons from '../SocialIcons/SocialIcons';
 
 const Landing = ({ props }) => {
   const classes = useStyles(props);
@@ -34,36 +30,12 @@ const Landing = ({ props }) => {
     </ThemeProvider>
   );
 
-  const socialIcons = [
-    {
-      icon: <GitHubIcon />,
-      href: 'https://github.com/Mupa1',
-    },
-    {
-      icon: <TwitterIcon />,
-      href: 'https://twitter.com/mupa_mmbetsa',
-    },
-    {
-      icon: <LinkedInIcon />,
-      href: 'https://www.linkedin.com/in/mupa-mmbetsa',
-    },
-  ];
-
-  const getSocialIcons = () => socialIcons.map(({ icon, href }) => (
-    <li key={uuidv4()}>
-      <ExternalLink href={href} className={classes.socialIcons}>
-        {icon}
-      </ExternalLink>
-    </li>
-  ));
-
   return (
     <section className={classes.root}>
       <article className={classes.landingInfo}>
         {landingInfo()}
         <p> I enjoy building beautiful, user-friendly websites and web applications. Look through some of my work and experiences! If you like what you see and have a project you need to be coded, don&apos;t hesitate to contact me. </p>
-        <p className={classes.connect}>LETS CONNECT</p>
-        <ul>{getSocialIcons()}</ul>
+        <SocialIcons />
       </article>
     </section>
   );

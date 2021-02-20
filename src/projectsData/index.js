@@ -24,7 +24,7 @@ const projectsData = [
     imageSrc: shooter,
     title: 'Shooter Game',
     description: 'An RPG shooter game built with Phaser 3, a JavaScript game framework designed to create 2D games',
-    techStack: [{ tech: 'JavaScript' }, { tech: 'Phaser3' }, { tech: 'HTML5' }, { tech: 'CSS3' }],
+    techStack: [{ tech: 'JavaScript' }, { tech: 'Phaser3' }, { tech: 'Webpack' }],
     live: 'https://mupa-shooter-game.netlify.app/',
     github: 'https://github.com/Mupa1/rpg-shooter-game',
   },

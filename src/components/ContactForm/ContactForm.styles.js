@@ -1,7 +1,7 @@
-import { makeStyles, withStyles, Button } from '@material-ui/core';
+import { makeStyles } from '@material-ui/core';
 import footerBg from '../../assets/footerBg.png';
 
-export const useStyles = makeStyles(() => ({
+const useStyles = makeStyles(() => ({
   root: {
     color: '#fff',
     textAlign: 'center',
@@ -45,20 +45,4 @@ export const useStyles = makeStyles(() => ({
   },
 }));
 
-export const StyledButton = withStyles({
-  root: {
-    backgroundColor: '#fff',
-    borderRadius: 8,
-    boxSizing: 'border-box',
-    border: '1px solid #7F8CFF',
-    color: '#6070FF',
-    fontSize: '16px',
-    padding: '7px 10px',
-    marginTop: '5px',
-    '&:hover': {
-      backgroundColor: '#6070FF',
-      color: '#fff',
-      boxShadow: '0px 8px 16px rgba(64, 83, 252, 0.24)',
-    },
-  },
-})(Button);
+export default useStyles;
