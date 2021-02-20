@@ -10,25 +10,20 @@ export const useStyles = makeStyles(() => ({
     backgroundSize: 'cover',
     backgroundRepeat: 'no-repeat',
     borderTopLeftRadius: '80px',
-    padding: '50px 0',
+    padding: '50px 10px',
     '@media (max-width: 900px)': {
       height: 'auto',
     },
   },
   formContainer: {
     maxWidth: '447px',
-    margin: '10px auto',
-  },
-  text: {
-    width: '90%',
     margin: 'auto',
   },
   fields: {
-    width: '90%',
+    width: '100%',
     borderRadius: '2px',
     padding: '12px 0 12px 10px',
     border: '1px solid #cfd8dc',
-    margin: '10px 0',
     resize: 'none',
     '&::placeholder': { /* Chrome, Firefox, Opera, Safari 10.1+ */
       color: '#cfd8dc',
@@ -54,7 +49,6 @@ export const StyledButton = withStyles({
     color: '#6070FF',
     fontSize: '16px',
     padding: '7px 10px',
-    marginTop: '5px',
     '&:hover': {
       backgroundColor: '#6070FF',
       color: '#fff',

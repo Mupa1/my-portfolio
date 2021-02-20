@@ -2,12 +2,12 @@
 /* eslint-disable max-len */
 import React, { useState } from 'react';
 import PropTypes from 'prop-types';
-import { Typography } from '@material-ui/core';
+import { Typography, Grid } from '@material-ui/core';
 import { createMuiTheme, ThemeProvider } from '@material-ui/core/styles';
 import axios from 'axios';
-import { useStyles, StyledButton } from './ContactForm.styles';
+import { useStyles, StyledButton } from './About.styles';
 
-const ContactForm = ({ props }) => {
+const About = ({ props }) => {
   const [serverState, setServerState] = useState({
     submitting: false,
     status: null,
@@ -55,66 +55,77 @@ const ContactForm = ({ props }) => {
       });
   };
 
-  const getContactForm = () => (
+  const getAbout = () => (
     <form onSubmit={handleOnSubmit}>
-      <input
-        type="text"
-        name="name"
-        id="name"
-        placeholder="Name"
-        className={`${classes.inputs} ${classes.fields}`}
-        required
-      />
-      <input
-        type="email"
-        name="email"
-        id="email"
-        placeholder="Email"
-        className={`${classes.inputs} ${classes.fields}`}
-        required
-      />
-      <textarea
-        name="message"
-        id="message"
-        rows="10"
-        placeholder="Message"
-        className={classes.fields}
-        required
-      />
-      <ThemeProvider theme={theme}>
-        <StyledButton type="submit" disabled={serverState.submitting}>
-          Get in touch
-        </StyledButton>
-      </ThemeProvider>
-      {serverState.status && (
-        <p className={!serverState.status.ok ? 'Error' : ''}>
-          {serverState.status.msg}
-        </p>
-      )}
+      <Grid container spacing={2} direction="column">
+        <Grid item>
+          <input
+            type="text"
+            name="name"
+            id="name"
+            placeholder="Name"
+            className={`${classes.inputs} ${classes.fields}`}
+            required
+          />
+        </Grid>
+        <Grid item>
+          <input
+            type="email"
+            name="email"
+            id="email"
+            placeholder="Email"
+            className={`${classes.inputs} ${classes.fields}`}
+            required
+          />
+        </Grid>
+        <Grid item>
+          <textarea
+            name="message"
+            id="message"
+            cols="30"
+            rows="10"
+            placeholder="Message"
+            className={classes.fields}
+            required
+          />
+        </Grid>
+        <Grid item>
+          <ThemeProvider theme={theme}>
+            <StyledButton type="submit" disabled={serverState.submitting}>
+              Get in touch
+            </StyledButton>
+          </ThemeProvider>
+        </Grid>
+        {serverState.status && (
+          <p className={!serverState.status.ok ? 'Error' : ''}>
+            {serverState.status.msg}
+          </p>
+        )}
+      </Grid>
     </form>
   );
 
   return (
     <footer className={classes.root} id="contact" name="contact">
       <article className={classes.formContainer}>
-        <Typography gutterBottom variant="h4" component="h2" style={{ fontWeight: 'bold', }} className={classes.text}>
+        <Typography gutterBottom variant="h4" component="h2" style={{ fontWeight: 'bold', }}>
           Contact me
         </Typography>
-        <Typography variant="body1" gutterBottom className={classes.text}>
+        <Typography variant="body1" gutterBottom>
           If you have an application you are interested in developing that you need built or a project that needs coding. I&apos;d love to help  with it.
         </Typography>
-        {getContactForm()}
+        {getAbout()}
       </article>
     </footer>
   );
 };
 
-ContactForm.defaultProps = {
+About.defaultProps = {
   props: () => { },
 };
 
-ContactForm.propTypes = {
+About.propTypes = {
   props: PropTypes.func,
 };
 
-export default ContactForm;
+export default About;
