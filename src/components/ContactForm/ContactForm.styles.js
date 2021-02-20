@@ -25,7 +25,7 @@ export const useStyles = makeStyles(() => ({
   },
   fields: {
     width: '90%',
-    borderRadius: '2px',
+    borderRadius: '8px',
     padding: '12px 0 12px 10px',
     border: '1px solid #cfd8dc',
     margin: '10px 0',

@@ -1,6 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import useStyles from './Footer.styles';
+import About from '../About/About';
 import ContactForm from '../ContactForm/ContactForm';
 
 const Footer = ({ props }) => {
@@ -8,6 +9,7 @@ const Footer = ({ props }) => {
 
   return (
     <section className={classes.root}>
+      <About />
       <ContactForm />
     </section>
   );
