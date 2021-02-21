@@ -1,6 +1,6 @@
 import React from 'react';
 import { BrowserRouter, Route } from 'react-router-dom';
-import Home from './components/home/Home';
+import Home from './components/Home/Home';
 
 const App = () => (
   <div className="App">

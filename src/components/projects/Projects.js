@@ -5,7 +5,7 @@ import { Element } from 'react-scroll';
 import { Button } from '@material-ui/core';
 import { useStyles } from './Projects.styles';
 import { projectsData } from '../../data';
-import ProjectCard from '../projectCard/ProjectCard';
+import ProjectCard from '../ProjectCard/ProjectCard';
 
 const Projects = ({ props }) => {
   const classes = useStyles(props);

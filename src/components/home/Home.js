@@ -1,11 +1,11 @@
 /* eslint-disable max-len */
 import React from 'react';
 import PropTypes from 'prop-types';
-import Header from '../header/Header';
-import Portfolio from '../projects/Projects';
-import Landing from '../landing/Landing';
+import Header from '../Header/Header';
+import Portfolio from '../Projects/Projects';
+import Landing from '../Landing/Landing';
 import useStyles from './Home.styles';
-import Footer from '../footer/Footer';
+import Footer from '../Footer/Footer';
 
 const Home = ({ props }) => {
   const classes = useStyles(props);
