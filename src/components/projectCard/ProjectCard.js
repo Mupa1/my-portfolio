@@ -7,28 +7,15 @@ import VisibilityIcon from '@material-ui/icons/Visibility';
 import {
   Grid, Paper, Typography, ButtonBase,
 } from '@material-ui/core';
-import { createMuiTheme, ThemeProvider } from '@material-ui/core/styles';
+import { ThemeProvider } from '@material-ui/core/styles';
 import useStyles from './ProjectCard.styles';
-import StyledButton from '../StyledButton/StyledButton';
+import { StyledButton, theme } from '../StyledButton/StyledButton';
 
 const ProjectCard = ({ props, project, techStack }) => {
   const {
     imageSrc, title, description, live, github,
   } = project;
   const classes = useStyles(props);
-  const theme = createMuiTheme({
-    palette: {
-      action: {
-        disabledBackground: '#EBEBFF',
-        disabled: '#6070FF',
-      },
-    },
-    typography: {
-      button: {
-        textTransform: 'none'
-      }
-    }
-  });
 
   return (
     <article className={classes.root}>

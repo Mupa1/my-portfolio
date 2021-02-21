@@ -3,7 +3,7 @@ import shooter from '../assets/shooter.png';
 import newsweek from '../assets/newsweekclone.png';
 import bookit from '../assets/bookit1.png';
 
-const projectsData = [
+export const projectsData = [
   {
     imageSrc: tastyRecipes,
     title: 'Tasty Recipes',
@@ -38,4 +38,13 @@ const projectsData = [
   },
 ];
 
-export default projectsData;
+export const skillsAndTech = [
+  {
+    title: 'Skills',
+    description: 'Semantic HTML - Responsive Design - CSS Preprocessing - DOM manipulation - UI Engineering - OOP - MVC - RESTful APIs - TDD / BDD - Unit Testing - Refactoring - Deployment - Relational Databases - Version Control - Git Flow - Pair Programming - Wireframing',
+  },
+  {
+    title: 'Technology',
+    description: 'HTML5 - CSS3 - SCSS - JavaScript - Webpack - React - Redux - Material UI - Bootstrap - Ruby - Ruby on Rails - PostgreSQL - MySQL - NodeJS - RSpec - Jest - REST APIs - Webpack - NPM - Git - Figma - Netlify',
+  },
+];

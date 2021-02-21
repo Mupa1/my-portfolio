@@ -3,10 +3,10 @@
 import React, { useState } from 'react';
 import PropTypes from 'prop-types';
 import { Typography } from '@material-ui/core';
-import { createMuiTheme, ThemeProvider } from '@material-ui/core/styles';
+import { ThemeProvider } from '@material-ui/core/styles';
 import axios from 'axios';
 import useStyles from './ContactForm.styles';
-import StyledButton from '../StyledButton/StyledButton';
+import { StyledButton, theme } from '../StyledButton/StyledButton';
 
 const ContactForm = ({ props }) => {
   const [serverState, setServerState] = useState({
@@ -15,19 +15,6 @@ const ContactForm = ({ props }) => {
   });
 
   const classes = useStyles(props);
-  const theme = createMuiTheme({
-    palette: {
-      action: {
-        disabledBackground: '#EBEBFF',
-        disabled: '#6070FF',
-      },
-    },
-    typography: {
-      button: {
-        textTransform: 'none'
-      }
-    }
-  });
 
   const handleServerResponse = (ok, msg, form) => {
     setServerState({

@@ -4,7 +4,7 @@ import { v4 as uuidv4 } from 'uuid';
 import { Element } from 'react-scroll';
 import { Button } from '@material-ui/core';
 import { useStyles } from './Projects.styles';
-import projectsData from '../../projectsData';
+import { projectsData } from '../../data';
 import ProjectCard from '../projectCard/ProjectCard';
 
 const Projects = ({ props }) => {

@@ -2,30 +2,28 @@
 /* eslint-disable comma-dangle */
 import React from 'react';
 import PropTypes from 'prop-types';
+import { v4 as uuidv4 } from 'uuid';
 import { ExternalLink } from 'react-external-link';
-import { createMuiTheme, ThemeProvider } from '@material-ui/core/styles';
+import { ThemeProvider } from '@material-ui/core/styles';
 import {
   Grid, Paper, Typography,
 } from '@material-ui/core';
+import { skillsAndTech } from '../../data';
 import useStyles from './About.styles';
 import SocialIcons from '../SocialIcons/SocialIcons';
-import StyledButton from '../StyledButton/StyledButton';
+import { StyledButton, theme } from '../StyledButton/StyledButton';
 
 const About = ({ props }) => {
   const classes = useStyles(props);
-  const theme = createMuiTheme({
-    palette: {
-      action: {
-        disabledBackground: '#EBEBFF',
-        disabled: '#6070FF',
-      },
-    },
-    typography: {
-      button: {
-        textTransform: 'none'
-      }
-    }
-  });
+
+  const getSkillAndTech = () => skillsAndTech.map(data => (
+    <Grid item xs key={uuidv4}>
+      <Typography gutterBottom variant="h6" component="h3" style={{ fontWeight: 'bold', }}>
+        {data.title}
+      </Typography>
+      <p>{data.description}</p>
+    </Grid>
+  ));
 
   return (
     <article className={classes.root} id="about" name="about">
@@ -46,18 +44,7 @@ const About = ({ props }) => {
             </ThemeProvider>
           </Grid>
           <Grid item xs={12} md={6} container spacing={2} direction="column">
-            <Grid item xs>
-              <Typography gutterBottom variant="h6" component="h3" style={{ fontWeight: 'bold', }}>
-                Skills
-              </Typography>
-              <p> Semantic HTML - Responsive Design - CSS Preprocessing - DOM manipulation - UI Engineering - OOP - MVC - RESTful APIs - TDD / BDD - Unit Testing - Refactoring - Deployment - Relational Databases - Version Control - Git Flow - Pair Programming - Wireframing </p>
-            </Grid>
-            <Grid item xs>
-              <Typography gutterBottom variant="h6" component="h3" style={{ fontWeight: 'bold', }}>
-                Technology
-              </Typography>
-              <p> HTML5 - CSS3 - SCSS - JavaScript - Webpack - React - Redux - Material UI - Bootstrap - Ruby - Ruby on Rails - PostgreSQL - MySQL - NodeJS - RSpec - Jest - REST APIs - Webpack - NPM - Git - Figma - Netlify </p>
-            </Grid>
+            {getSkillAndTech()}
           </Grid>
         </Grid>
       </Paper>

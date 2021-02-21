@@ -1,6 +1,7 @@
 import { withStyles, Button } from '@material-ui/core';
+import { createMuiTheme } from '@material-ui/core/styles';
 
-const StyledButton = withStyles({
+export const StyledButton = withStyles({
   root: {
     backgroundColor: '#fff',
     borderRadius: 8,
@@ -16,5 +17,19 @@ const StyledButton = withStyles({
     },
   },
 })(Button);
+
+export const theme = createMuiTheme({
+  palette: {
+    action: {
+      disabledBackground: '#EBEBFF',
+      disabled: '#6070FF',
+    },
+  },
+  typography: {
+    button: {
+      textTransform: 'none',
+    },
+  },
+});
 
 export default StyledButton;
