@@ -3,6 +3,9 @@ import { makeStyles } from '@material-ui/core';
 export const useStyles = makeStyles(() => ({
   root: {
     paddingBottom: '100px',
+    '@media (max-width: 900px)': {
+      paddingBottom: '88px',
+    },
   },
   techStack: {
     fontSize: '12px',

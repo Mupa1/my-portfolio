@@ -21,8 +21,8 @@ const ProjectCard = ({ props, project, techStack }) => {
     <article className={classes.root}>
       <Paper className={classes.paper}>
         <Grid container spacing={2}>
-          <Grid item xs={12} md={7}>
-            <ButtonBase className={classes.imageSrc}>
+          <Grid item xs={12} md={7} className={classes.imageBox}>
+            <ButtonBase className={classes.image}>
               <img className={classes.img} src={imageSrc} alt="card" />
             </ButtonBase>
           </Grid>

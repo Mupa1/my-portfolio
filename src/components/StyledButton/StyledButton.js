@@ -22,7 +22,7 @@ export const theme = createMuiTheme({
   palette: {
     action: {
       disabledBackground: '#EBEBFF',
-      disabled: '#6070FF',
+      disabled: '#4053FC',
     },
   },
   typography: {

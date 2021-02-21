@@ -2,14 +2,25 @@ import { makeStyles } from '@material-ui/core';
 
 const useStyles = makeStyles(() => ({
   root: {
+    marginBottom: '50px',
+  },
+  appBar: {
     color: '#344563',
     backgroundColor: '#fff',
     paddingRight: '79px',
     paddingLeft: '79px',
-
     '@media (max-width: 900px)': {
-      paddingLeft: 0,
+      padding: 0,
     },
+  },
+  logoBox: {
+    display: 'flex',
+    justifyContent: 'space-between',
+    width: '100%',
+  },
+  logo: {
+    width: '64px',
+    height: '64px',
   },
   menuButton: {
     fontWeight: 700,
@@ -26,7 +37,8 @@ const useStyles = makeStyles(() => ({
     justifyContent: 'space-between',
   },
   drawerContainer: {
-    padding: '20px 30px',
+    padding: '20px 50px',
+    width: '80%',
   },
 }));
 

@@ -17,16 +17,18 @@ const useStyles = makeStyles(theme => ({
       boxShadow: '10px 10px 30px 10px rgba(0, 0, 0, 12%)',
     },
   },
-  image: {
+  imageBox: {
     width: '100%',
-    maxHeight: '448px',
-    background: '#e5e5e5',
+    borderRadius: '8px',
+    background: '#fff',
+    display: 'flex',
+    alignItems: 'center',
   },
   img: {
     margin: 'auto',
     display: 'block',
     maxWidth: '100%',
-    maxHeight: '100%',
+    maxHeight: '448px',
     borderRadius: '8px',
   },
   techStack: {

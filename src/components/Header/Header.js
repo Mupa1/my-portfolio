@@ -9,25 +9,12 @@ import {
 import MenuIcon from '@material-ui/icons/Menu';
 import PropTypes from 'prop-types';
 import Scroll from 'react-scroll';
+import ElevationScroll from '../ElevationScroll';
+import { headersData } from '../../data';
 import logo from '../../assets/logo2.png';
 import useStyles from './Header.styles';
 
 const { Link } = Scroll;
-
-const headersData = [
-  {
-    label: 'Projects',
-    href: 'projects',
-  },
-  {
-    label: 'About',
-    href: 'about',
-  },
-  {
-    label: 'Contact',
-    href: 'contact',
-  },
-];
 
 const Header = ({ props }) => {
   const classes = useStyles(props);
@@ -88,17 +75,19 @@ const Header = ({ props }) => {
 
     return (
       <Toolbar>
-        <img src={logo} alt="Logo" />
-        <IconButton
-          edge="end"
-          arial-label="menu"
-          aria-haspopup="true"
-          onClick={handleDrawerOpen}
-        >
-          <MenuIcon />
-        </IconButton>
+        <div className={classes.logoBox}>
+          <img src={logo} alt="Logo" className={classes.logo} />
+          <IconButton
+            edge="end"
+            arial-label="menu"
+            aria-haspopup="true"
+            onClick={handleDrawerOpen}
+          >
+            <MenuIcon fontSize="large" />
+          </IconButton>
+        </div>
         <Drawer
-          anchor="right"
+          anchor="left"
           open={drawerOpen}
           onClose={handleDrawerClose}
         >
@@ -109,10 +98,12 @@ const Header = ({ props }) => {
   };
 
   return (
-    <header>
-      <AppBar className={classes.root}>
-        {mobileView ? displayMobile() : displayDesktop()}
-      </AppBar>
+    <header className={classes.root}>
+      <ElevationScroll props>
+        <AppBar className={classes.appBar}>
+          {mobileView ? displayMobile() : displayDesktop()}
+        </AppBar>
+      </ElevationScroll>
     </header>
   );
 };

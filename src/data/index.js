@@ -3,6 +3,21 @@ import shooter from '../assets/shooter.png';
 import newsweek from '../assets/newsweekclone.png';
 import bookit from '../assets/bookit1.png';
 
+export const headersData = [
+  {
+    label: 'Projects',
+    href: 'projects',
+  },
+  {
+    label: 'About',
+    href: 'about',
+  },
+  {
+    label: 'Contact',
+    href: 'contact',
+  },
+];
+
 export const projectsData = [
   {
     imageSrc: tastyRecipes,
@@ -45,6 +60,6 @@ export const skillsAndTech = [
   },
   {
     title: 'Technology',
-    description: 'HTML5 - CSS3 - SCSS - JavaScript - Webpack - React - Redux - Material UI - Bootstrap - Ruby - Ruby on Rails - PostgreSQL - MySQL - NodeJS - RSpec - Jest - REST APIs - Webpack - NPM - Git - Figma - Netlify',
+    description: 'HTML5 - CSS3 - SCSS - JavaScript - Webpack - React - Redux - Material UI - Bootstrap - Ruby - Ruby on Rails - PostgreSQL - MySQL - NodeJS - RSpec - Jest - REST APIs - NPM - Git - Figma - Netlify',
   },
 ];
