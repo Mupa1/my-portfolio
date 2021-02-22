@@ -18,7 +18,7 @@ const About = ({ props }) => {
 
   const getSkillAndTech = () => skillsAndTech.map(data => (
     <Grid item xs key={uuidv4}>
-      <Typography gutterBottom variant="h6" component="h3" style={{ fontWeight: 'bold', }}>
+      <Typography gutterBottom variant="h5" component="h3" style={{ fontWeight: 'bold', }}>
         {data.title}
       </Typography>
       <Typography variant="body1" gutterBottom>{data.description}</Typography>
@@ -33,7 +33,15 @@ const About = ({ props }) => {
             <Typography gutterBottom variant="h4" component="h2" style={{ fontWeight: 'bold', }}>
               About me
             </Typography>
-            <Typography variant="body1" gutterBottom> I enjoy building beautiful, user-friendly websites and web applications. Look through some of my work and experiences! If you like what you see and have a project you need to be coded, don&apos;t hesitate to contact me. </Typography>
+            <Typography variant="body1" gutterBottom>
+              {' '}
+              I am a self-taught full-stack developer with a background in graphic design.
+              <br />
+              I have always been fascinated by software&apos;s potentials as a designer. So I learned web development by building multiple websites and web applications.
+              <br />
+              Currently, I am looking for a position as a front-end or full-stack developer, joining an experienced team and contribute to building great products.
+              {' '}
+            </Typography>
             <SocialIcons />
             <ThemeProvider theme={theme}>
               <ExternalLink href="https://docs.google.com/document/d/1oxxxVT-Vl2mcb0P8pg_EK_0UnQU_FIuZqdYFDq14hQA/edit">

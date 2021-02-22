@@ -29,6 +29,10 @@ export const theme = createMuiTheme({
     button: {
       textTransform: 'none',
     },
+    fontFamily: [
+      'Poppins',
+      'sans-serif',
+    ].join(','),
   },
 });
 

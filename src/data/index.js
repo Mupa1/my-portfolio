@@ -1,7 +1,7 @@
 import tastyRecipes from '../assets/tastyRecipes.png';
 import shooter from '../assets/shooter.png';
-import newsweek from '../assets/newsweekclone.png';
-import bookit from '../assets/bookit1.png';
+import newsweek from '../assets/newsweek.png';
+import portfolio from '../assets/portfolio.png';
 
 export const headersData = [
   {
@@ -22,18 +22,10 @@ export const projectsData = [
   {
     imageSrc: tastyRecipes,
     title: 'Tasty Recipes',
-    description: 'A single page application that fetches recipe data from Spoonacular API and stores it in the redux store. The user can filter through a variety of recipes.',
+    description: 'A single-page web application that lets the user discover or filter through a variety of recipes by fetching data from Spoonacular API.',
     techStack: [{ tech: 'React' }, { tech: 'Redux' }],
     live: 'https://tasty-yummy-recipes-app.netlify.app/',
     github: 'https://github.com/Mupa1/tasty-recipes',
-  },
-  {
-    imageSrc: newsweek,
-    title: 'Newsweek Clone',
-    description: 'A responsive grid-based UI clone from the Newsweek website homepage.',
-    techStack: [{ tech: 'HTML5' }, { tech: 'CSS3' }, { tech: 'BOOTSTRAP' }],
-    live: 'https://cocky-borg-5ade74.netlify.app/',
-    github: 'https://github.com/Mupa1/Newsweek-Clone',
   },
   {
     imageSrc: shooter,
@@ -44,12 +36,20 @@ export const projectsData = [
     github: 'https://github.com/Mupa1/rpg-shooter-game',
   },
   {
-    imageSrc: bookit,
-    title: 'Bookit',
-    description: "A Single Page Application for booking a doctor's appointment.The app is built with React and Redux libraries for the frontend and fetches data from a backend API built using Ruby on Rails.",
-    techStack: [{ tech: 'React' }, { tech: 'Redux' }, { tech: 'Ruby on Rails' }],
-    live: 'https://bookit-doc-appointments.netlify.app/',
-    github: 'https://github.com/Mupa1/bookit-frontend',
+    imageSrc: portfolio,
+    title: 'This Portfolio',
+    description: 'A responsive personal web development portfolio built using react and screenshots combined using Figma.',
+    techStack: [{ tech: 'React' }, { tech: 'Material UI' }],
+    live: 'https://mupa-dev.netlify.app/',
+    github: 'https://github.com/Mupa1/my-portfolio',
+  },
+  {
+    imageSrc: newsweek,
+    title: 'Newsweek Clone',
+    description: 'A responsive grid-based UI clone from the Newsweek website homepage.',
+    techStack: [{ tech: 'HTML5' }, { tech: 'CSS3' }, { tech: 'BOOTSTRAP' }],
+    live: 'https://cocky-borg-5ade74.netlify.app/',
+    github: 'https://github.com/Mupa1/Newsweek-Clone',
   },
 ];
 

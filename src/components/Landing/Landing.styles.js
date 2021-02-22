@@ -14,12 +14,6 @@ const useStyles = makeStyles(() => ({
     backgroundSize: 'cover',
     backgroundRepeat: 'no-repeat',
     borderBottomLeftRadius: '80px',
-    '@media (max-width: 480px)': {
-      height: 'auto',
-    },
-    '@media (max-width: 320px)': {
-      height: 'calc(100vh - 50px);',
-    },
   },
   landingInfo: {
     padding: '0 200px',
