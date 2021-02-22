@@ -3,8 +3,10 @@ import { makeStyles } from '@material-ui/core';
 const useStyles = makeStyles(() => ({
   root: {
     marginBottom: '50px',
+    maxWidth: '1440px',
   },
   appBar: {
+    margin: 'auto',
     color: '#344563',
     backgroundColor: '#fff',
     paddingRight: '79px',
@@ -22,22 +24,32 @@ const useStyles = makeStyles(() => ({
     width: '64px',
     height: '64px',
   },
-  menuButton: {
-    fontWeight: 700,
-    size: '18px',
-    marginLeft: '38px',
-    color: '#344563',
+  munuItem: {
+    '&:hover': {
+      backgroundColor: '#fff',
+    },
   },
-  mobileMenuButton: {
-    borderBottom: '1px solid #344563',
+  menuButtonDesktop: {
+    marginLeft: '38px',
+    '&:hover': {
+      cursor: 'pointer',
+    },
+  },
+  menuButton: {
+    fontWeight: 500,
     color: '#344563',
+    '&:hover': {
+      color: '#6070ff',
+      backgroundColor: '#fff',
+      fontWeight: 700,
+    },
   },
   toolbar: {
     display: 'flex',
     justifyContent: 'space-between',
   },
   drawerContainer: {
-    padding: '20px 50px',
+    paddingRight: '100px',
     width: '80%',
   },
 }));

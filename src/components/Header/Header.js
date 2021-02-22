@@ -42,7 +42,7 @@ const Header = ({ props }) => {
       smooth
       offset={-70}
       duration={500}
-      className={classes.menuButton}
+      className={`${classes.menuButton} ${classes.menuButtonDesktop}`}
     >
       {label}
     </Link>
@@ -56,17 +56,18 @@ const Header = ({ props }) => {
   );
 
   const getDrawerChoices = () => headersData.map(({ label, href }) => (
-    <Link
-      key={label}
-      to={href}
-      spy
-      smooth
-      offset={-70}
-      duration={500}
-      className={classes.mobileMenuButton}
-    >
-      <MenuItem>{label}</MenuItem>
-    </Link>
+    <MenuItem key={label} className={classes.munuItem}>
+      <Link
+        to={href}
+        spy
+        smooth
+        offset={-70}
+        duration={500}
+        className={classes.menuButton}
+      >
+        {label}
+      </Link>
+    </MenuItem>
   ));
 
   const displayMobile = () => {

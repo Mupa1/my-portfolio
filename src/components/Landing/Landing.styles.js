@@ -3,17 +3,22 @@ import landingBg from '../../assets/landingBg.png';
 
 const useStyles = makeStyles(() => ({
   root: {
-    paddingTop: '20vh',
+    '&:-moz-box-sizing': 'border-box',
+    boxSizing: 'border-box',
+    display: 'flex',
+    alignItems: 'center',
     color: '#344563',
     backgroundColor: '#fff',
     backgroundImage: `url(${landingBg})`,
-    height: '80vh',
-    // backgroundPosition: 'center',
+    height: 'calc(100vh - 50px);',
     backgroundSize: 'cover',
     backgroundRepeat: 'no-repeat',
     borderBottomLeftRadius: '80px',
-    '@media (max-width: 900px)': {
+    '@media (max-width: 480px)': {
       height: 'auto',
+    },
+    '@media (max-width: 320px)': {
+      height: 'calc(100vh - 50px);',
     },
   },
   landingInfo: {
@@ -35,9 +40,6 @@ const useStyles = makeStyles(() => ({
   },
   spacing: {
     padding: '20px 0',
-  },
-  connect: {
-    color: '#6070FF',
   },
   socialIcons: {
     color: '#344563',

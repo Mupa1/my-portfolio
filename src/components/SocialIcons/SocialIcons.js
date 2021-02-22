@@ -3,6 +3,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import { v4 as uuidv4 } from 'uuid';
+import { Typography } from '@material-ui/core';
 import { ExternalLink } from 'react-external-link';
 import LinkedInIcon from '@material-ui/icons/LinkedIn';
 import GitHubIcon from '@material-ui/icons/GitHub';
@@ -37,7 +38,7 @@ const SocialIcons = ({ props }) => {
 
   return (
     <>
-      <p className={classes.connect}>LETS CONNECT</p>
+      <Typography className={classes.connect}>LETS CONNECT</Typography>
       <ul>{getSocialIcons()}</ul>
     </>
   );

@@ -2,7 +2,8 @@ import { makeStyles } from '@material-ui/core';
 
 const useStyles = makeStyles(() => ({
   connect: {
-    color: '#7F8CFF',
+    paddingTop: '10px',
+    color: '#4053FC',
   },
   socialIcons: {
     color: '#344563',

@@ -75,9 +75,9 @@ const ContactForm = ({ props }) => {
         </StyledButton>
       </ThemeProvider>
       {serverState.status && (
-        <p className={!serverState.status.ok ? 'Error' : ''}>
+        <Typography className={!serverState.status.ok ? 'Error' : ''}>
           {serverState.status.msg}
-        </p>
+        </Typography>
       )}
     </form>
   );

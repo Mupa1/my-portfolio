@@ -21,7 +21,7 @@ const About = ({ props }) => {
       <Typography gutterBottom variant="h6" component="h3" style={{ fontWeight: 'bold', }}>
         {data.title}
       </Typography>
-      <p>{data.description}</p>
+      <Typography variant="body1" gutterBottom>{data.description}</Typography>
     </Grid>
   ));
 
@@ -33,7 +33,7 @@ const About = ({ props }) => {
             <Typography gutterBottom variant="h4" component="h2" style={{ fontWeight: 'bold', }}>
               About me
             </Typography>
-            <p> I enjoy building beautiful, user-friendly websites and web applications. Look through some of my work and experiences! If you like what you see and have a project you need to be coded, don&apos;t hesitate to contact me. </p>
+            <Typography variant="body1" gutterBottom> I enjoy building beautiful, user-friendly websites and web applications. Look through some of my work and experiences! If you like what you see and have a project you need to be coded, don&apos;t hesitate to contact me. </Typography>
             <SocialIcons />
             <ThemeProvider theme={theme}>
               <ExternalLink href="https://docs.google.com/document/d/1oxxxVT-Vl2mcb0P8pg_EK_0UnQU_FIuZqdYFDq14hQA/edit">
