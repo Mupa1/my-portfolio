@@ -8,7 +8,7 @@ export const useStyles = makeStyles(() => ({
     },
   },
   techStack: {
-    fontSize: '0.75rem',
+    fontSize: '0.75em',
     margin: '5px 5px 5px',
     borderRadius: '8px',
   },
