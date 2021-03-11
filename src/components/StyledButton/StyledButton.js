@@ -8,7 +8,7 @@ export const StyledButton = withStyles({
     boxSizing: 'border-box',
     border: '1px solid #7F8CFF',
     color: '#4053FC',
-    fontSize: '1rem',
+    fontSize: '1em',
     padding: '7px 10px',
     '&:hover': {
       backgroundColor: '#6070FF',
