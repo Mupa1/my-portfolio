@@ -3,6 +3,7 @@ import shooter from '../assets/shooter.png';
 import newsweek from '../assets/newsweek.png';
 import portfolio from '../assets/portfolio.png';
 import bookIt from '../assets/bookIT.png';
+import eshop from '../assets/eshop.png';
 
 export const headersData = [
   {
@@ -20,6 +21,14 @@ export const headersData = [
 ];
 
 export const projectsData = [
+  {
+    imageSrc: eshop,
+    title: 'e-shop',
+    description: 'This project is based on an eCommerce website built with React. The user can add items to the cart, increase or decrease the number of items on the cart, or even empty the cart. The user can also click on checkout from the cart and pay by entering his/her credit card number.',
+    techStack: [{ tech: 'React' }, { tech: 'Redux' }, { tech: 'Material-UI' }],
+    live: 'https://e-shop-ecommerce.netlify.app/',
+    github: 'https://github.com/Mupa1/e-shop',
+  },
   {
     imageSrc: bookIt,
     title: 'BookIT',
