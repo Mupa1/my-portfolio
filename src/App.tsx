@@ -1,10 +1,9 @@
-import React from 'react';
-import { ThemeProvider, responsiveFontSizes, createMuiTheme } from '@material-ui/core/styles';
-import { BrowserRouter, Route } from 'react-router-dom';
+import { ThemeProvider, createTheme, responsiveFontSizes } from '@mui/material/styles';
+import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import Home from './components/Home/Home';
 
 const App = () => {
-  let theme = createMuiTheme({
+  let theme = createTheme({
     typography: {
       fontFamily: [
         'Poppins',
@@ -18,7 +17,9 @@ const App = () => {
     <ThemeProvider theme={theme}>
       <div className="App">
         <BrowserRouter>
-          <Route path="/" component={Home} />
+          <Routes>
+            <Route path="/" element={<Home />} />
+          </Routes>
         </BrowserRouter>
       </div>
     </ThemeProvider>

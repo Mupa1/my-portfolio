@@ -1,4 +1,4 @@
-import { makeStyles } from '@material-ui/core';
+import { makeStyles } from '@mui/styles';
 import landingBg from '../../assets/landingBg.png';
 
 const useStyles = makeStyles(() => ({
@@ -10,17 +10,18 @@ const useStyles = makeStyles(() => ({
     color: '#344563',
     backgroundColor: '#fff',
     backgroundImage: `url(${landingBg})`,
-    height: 'calc(100vh - 50px);',
+    height: 'calc(100vh - 64px)',
     backgroundSize: 'cover',
     backgroundRepeat: 'no-repeat',
     borderBottomLeftRadius: '80px',
+    padding: '15px',
   },
   landingInfo: {
     padding: '0 200px',
 
     '@media (max-width: 900px)': {
       padding: '0 10px',
-      paddingBottom: '100px',
+      paddingBottom: '150px',
     },
     '@media (max-width: 480px)': {
       padding: '0 10px',

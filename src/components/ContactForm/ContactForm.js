@@ -1,12 +1,11 @@
 /* eslint-disable comma-dangle */
 /* eslint-disable max-len */
-import React, { useState } from 'react';
+import { useState } from 'react';
 import PropTypes from 'prop-types';
-import { Typography } from '@material-ui/core';
-import { ThemeProvider } from '@material-ui/core/styles';
+import { Typography } from '@mui/material';
 import axios from 'axios';
 import useStyles from './ContactForm.styles';
-import { StyledButton, theme } from '../StyledButton/StyledButton';
+import { StyledButton } from '../StyledButton/StyledButton';
 
 const ContactForm = ({ props }) => {
   const [serverState, setServerState] = useState({
@@ -69,11 +68,9 @@ const ContactForm = ({ props }) => {
         className={classes.fields}
         required
       />
-      <ThemeProvider theme={theme}>
-        <StyledButton type="submit" disabled={serverState.submitting}>
-          Get in touch
-        </StyledButton>
-      </ThemeProvider>
+      <StyledButton type="submit" disabled={serverState.submitting} className={classes.submitBtn}>
+        Get in touch
+      </StyledButton>
       {serverState.status && (
         <Typography className={!serverState.status.ok ? 'Error' : ''}>
           {serverState.status.msg}
@@ -85,7 +82,7 @@ const ContactForm = ({ props }) => {
   return (
     <footer className={classes.root} id="contact" name="contact">
       <article className={classes.formContainer}>
-        <Typography gutterBottom variant="h4" component="h2" style={{ fontWeight: 'bold', }} className={classes.text}>
+        <Typography gutterBottom variant="h4" component="h2" sx={{ fontWeight: 'bold', }} className={classes.text}>
           Contact me
         </Typography>
         <Typography variant="body1" gutterBottom className={classes.text}>

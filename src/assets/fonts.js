@@ -1,6 +1,6 @@
-import { createMuiTheme } from '@material-ui/core/styles';
+import { createTheme } from '@mui/material/styles';
 
-const themeFont = createMuiTheme({
+const themeFont = createTheme({
   typography: {
     fontFamily: [
       'Josefin Sans',

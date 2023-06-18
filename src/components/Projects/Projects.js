@@ -1,8 +1,7 @@
-import React from 'react';
 import PropTypes from 'prop-types';
 import { v4 as uuidv4 } from 'uuid';
 import { Element } from 'react-scroll';
-import { Button } from '@material-ui/core';
+import { Button } from '@mui/material';
 import { useStyles } from './Projects.styles';
 import { projectsData } from '../../data';
 import ProjectCard from '../ProjectCard/ProjectCard';
@@ -11,7 +10,7 @@ const Projects = ({ props }) => {
   const classes = useStyles(props);
 
   const getTechStacks = techStack => techStack.map(techs => (
-    <Button variant="contained" color="primary" disabled className={classes.techStack} key={uuidv4()}>
+    <Button disabled className={classes.techStack} key={uuidv4()}>
       {techs.tech}
     </Button>
   ));

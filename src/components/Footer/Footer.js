@@ -1,4 +1,3 @@
-import React from 'react';
 import PropTypes from 'prop-types';
 import useStyles from './Footer.styles';
 import About from '../About/About';

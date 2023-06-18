@@ -2,7 +2,6 @@ import tastyRecipes from '../assets/tastyRecipes.png';
 import shooter from '../assets/shooter.png';
 import newsweek from '../assets/newsweek.png';
 import portfolio from '../assets/portfolio.png';
-import bookIt from '../assets/bookIT.png';
 import eshop from '../assets/eshop.png';
 
 export const headersData = [
@@ -30,22 +29,6 @@ export const projectsData = [
     github: 'https://github.com/Mupa1/e-shop',
   },
   {
-    imageSrc: bookIt,
-    title: 'BookIT',
-    description: 'A web application for booking an appointment with the doctor. The application is built using React and Redux libraries for the front-end and fetches data from a backend API built using Ruby on Rails.',
-    techStack: [{ tech: 'React' }, { tech: 'Redux' }, { tech: 'Ruby on Rails' }],
-    live: 'https://bookit-doc-appointments.netlify.app/',
-    github: 'https://github.com/Mupa1/bookit-frontend',
-  },
-  {
-    imageSrc: shooter,
-    title: 'Shooter Game',
-    description: 'An RPG shooter game built with Phaser 3, a JavaScript game framework designed to create 2D games',
-    techStack: [{ tech: 'JavaScript' }, { tech: 'Phaser3' }, { tech: 'Webpack' }],
-    live: 'https://mupa-shooter-game.netlify.app/',
-    github: 'https://github.com/Mupa1/rpg-shooter-game',
-  },
-  {
     imageSrc: tastyRecipes,
     title: 'Tasty Recipes',
     description: 'A single-page application that lets the user discover or filter through a variety of recipes by fetching data from Spoonacular API.',
@@ -62,6 +45,14 @@ export const projectsData = [
     github: 'https://github.com/Mupa1/my-portfolio',
   },
   {
+    imageSrc: shooter,
+    title: 'Shooter Game',
+    description: 'An RPG shooter game built with Phaser 3, a JavaScript game framework designed to create 2D games',
+    techStack: [{ tech: 'JavaScript' }, { tech: 'Phaser3' }, { tech: 'Webpack' }],
+    live: 'https://mupa-shooter-game.netlify.app/',
+    github: 'https://github.com/Mupa1/rpg-shooter-game',
+  },
+  {
     imageSrc: newsweek,
     title: 'Newsweek Clone',
     description: 'A responsive grid-based UI clone from the Newsweek website homepage.',
@@ -74,10 +65,10 @@ export const projectsData = [
 export const skillsAndTech = [
   {
     title: 'Skills',
-    description: 'Semantic HTML - Responsive Design - DOM manipulation - UI Engineering - OOP - MVC - RESTful APIs - TDD / BDD - Unit Testing - Refactoring - Deployment - Relational Databases - Version Control - Git Flow - Pair Programming - Wireframing',
+    description: 'Web Development - Semantic HTML - Responsive Design - DOM manipulation - OOP - MVC - RESTful APIs - TDD - Unit Testing - Refactoring - Deployment - Relational Databases - Version Control - Git Flow - Pair Programming - Wireframing',
   },
   {
     title: 'Technology',
-    description: 'HTML5 - CSS3 - SCSS - JavaScript - Webpack - React - Redux - Material UI - Bootstrap - Ruby - Ruby on Rails - PostgreSQL - MySQL - NodeJS - RSpec - Jest - REST APIs - NPM - Git - Figma',
+    description: 'HTML5 - CSS3 - SCSS - JavaScript - TypeScript - React - Redux - Next.js - Material UI - Bootstrap - Ruby - Ruby on Rails - PostgreSQL - MySQL - Node.js - Express - RSpec - Jest - REST APIs - Webpack - NPM - Git - Figma',
   },
 ];
