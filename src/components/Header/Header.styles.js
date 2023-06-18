@@ -1,9 +1,10 @@
-import { makeStyles } from '@material-ui/core';
+import { makeStyles } from '@mui/styles';
 
 const useStyles = makeStyles(() => ({
   root: {
     marginBottom: '50px',
     maxWidth: '1440px',
+    backgroundColor: '#fff',
   },
   appBar: {
     margin: 'auto',

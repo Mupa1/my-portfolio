@@ -1,17 +1,17 @@
-import { makeStyles } from '@material-ui/core';
+import { makeStyles } from '@mui/styles';
 
 export const useStyles = makeStyles(() => ({
   root: {
-    paddingBottom: '100px',
-    '@media (max-width: 900px)': {
-      paddingBottom: '88px',
+    paddingBottom: '50px',
+    '@media (max-width: 480px)': {
+      paddingBottom: '10px',
     },
   },
   techStack: {
     fontSize: '0.75em',
-    margin: '5px 5px 5px',
     borderRadius: '8px',
   },
+
 }));
 
 export default useStyles;

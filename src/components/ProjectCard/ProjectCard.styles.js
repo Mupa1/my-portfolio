@@ -1,11 +1,21 @@
-import { makeStyles } from '@material-ui/core';
+import { makeStyles } from '@mui/styles';
 
 const useStyles = makeStyles(theme => ({
   root: {
     flexGrow: 1,
-    padding: '100px 100px 0 100px',
-    '@media (max-width: 900px)': {
-      padding: '100px 10px 0 10px',
+    padding: '50px 50px 0 50px',
+    // '& .MuiButtonBase-root': {
+    //   marginRight: '5px',
+    //   border: '1px solid #7F8CFF',
+    //   color: '#4053FC',
+    //   '&:hover': {
+    //     backgroundColor: '#6070FF',
+    //     color: '#fff',
+    //     boxShadow: '0 8px 16px rgba(64, 83, 252, 0.24)',
+    //   },
+    // },
+    '@media (max-width: 480px)': {
+      padding: '10px 10px 0 10px',
     },
   },
   paper: {
@@ -31,13 +41,9 @@ const useStyles = makeStyles(theme => ({
     maxHeight: '448px',
     borderRadius: '8px',
   },
-  techStack: {
+  sourceLink: {
     fontSize: '0.75em',
-    margin: '5px 5px 5px',
     borderRadius: '8px',
-  },
-  liveLink: {
-    marginRight: '5px',
   },
 }));
 

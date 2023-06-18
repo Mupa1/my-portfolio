@@ -1,4 +1,4 @@
-import { makeStyles } from '@material-ui/core';
+import { makeStyles } from '@mui/styles';
 import footerBg from '../../assets/footerBg.png';
 
 const useStyles = makeStyles(() => ({
@@ -14,17 +14,28 @@ const useStyles = makeStyles(() => ({
     '@media (max-width: 900px)': {
       height: 'auto',
     },
+    '& .MuiButtonBase-root': {
+      backgroundColor: '#fff',
+      border: '1px solid #fff',
+      color: '#6070FF',
+      '&:hover': {
+        backgroundColor: '#6070FF',
+        color: '#fff',
+        boxShadow: '0 8px 16px rgba(64, 83, 252, 0.24)',
+      },
+    }
   },
   formContainer: {
     maxWidth: '447px',
     margin: '10px auto',
+    padding: '10px',
   },
   text: {
-    width: '90%',
     margin: 'auto',
   },
   fields: {
     width: '90%',
+    height: 'calc(100% - 20px);',
     borderRadius: '8px',
     padding: '12px 0 12px 10px',
     border: '1px solid #cfd8dc',

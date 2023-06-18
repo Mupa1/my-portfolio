@@ -12,11 +12,8 @@ A responsive personal web development portfolio built using react and material U
 ## Built With
 
 - React
+- TypeScript
 - Material UI
-- React-Create-App
-- React-DOM
-- CSS
-- ES6
 
 ## Author
 

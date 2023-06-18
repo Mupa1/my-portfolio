@@ -1,12 +1,12 @@
-import React, { useState, useEffect } from 'react';
+import { useState, useEffect } from 'react';
 import {
   AppBar,
   Toolbar,
   IconButton,
   Drawer,
   MenuItem,
-} from '@material-ui/core';
-import MenuIcon from '@material-ui/icons/Menu';
+} from '@mui/material';
+import MenuIcon from '@mui/icons-material/Menu';
 import PropTypes from 'prop-types';
 import Scroll from 'react-scroll';
 import ElevationScroll from '../ElevationScroll';
@@ -99,13 +99,13 @@ const Header = ({ props }) => {
   };
 
   return (
-    <header className={classes.root}>
+    <div className={classes.root}>
       <ElevationScroll props>
-        <AppBar className={classes.appBar}>
+        <AppBar className={classes.appBar} sx={{ backgroundColor: 'white' }}>
           {mobileView ? displayMobile() : displayDesktop()}
         </AppBar>
       </ElevationScroll>
-    </header>
+    </div>
   );
 };
 

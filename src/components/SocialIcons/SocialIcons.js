@@ -1,13 +1,12 @@
 /* eslint-disable comma-dangle */
 /* eslint-disable max-len */
-import React from 'react';
 import PropTypes from 'prop-types';
 import { v4 as uuidv4 } from 'uuid';
-import { Typography } from '@material-ui/core';
+import { Typography } from '@mui/material';
 import { ExternalLink } from 'react-external-link';
-import LinkedInIcon from '@material-ui/icons/LinkedIn';
-import GitHubIcon from '@material-ui/icons/GitHub';
-import TwitterIcon from '@material-ui/icons/Twitter';
+import LinkedInIcon from '@mui/icons-material/LinkedIn';
+import GitHubIcon from '@mui/icons-material/GitHub';
+import TwitterIcon from '@mui/icons-material/Twitter';
 import useStyles from './SocialIcons.styles';
 
 const SocialIcons = ({ props }) => {

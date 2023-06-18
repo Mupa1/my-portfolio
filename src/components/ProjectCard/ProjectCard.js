@@ -1,13 +1,12 @@
 /* eslint-disable comma-dangle */
-import React from 'react';
 import PropTypes from 'prop-types';
 import { ExternalLink } from 'react-external-link';
-import GitHubIcon from '@material-ui/icons/GitHub';
-import VisibilityIcon from '@material-ui/icons/Visibility';
+import GitHubIcon from '@mui/icons-material/GitHub';
+import VisibilityIcon from '@mui/icons-material/Visibility';
 import {
-  Grid, Paper, Typography, ButtonBase,
-} from '@material-ui/core';
-import { ThemeProvider } from '@material-ui/core/styles';
+  Grid, Paper, Typography,
+} from '@mui/material';
+import { ThemeProvider } from '@mui/material/styles';
 import useStyles from './ProjectCard.styles';
 import { StyledButton, theme } from '../StyledButton/StyledButton';
 
@@ -21,15 +20,15 @@ const ProjectCard = ({ props, project, techStack }) => {
     <article className={classes.root}>
       <Paper className={classes.paper}>
         <Grid container spacing={2}>
-          <Grid item xs={12} md={7} className={classes.imageBox}>
-            <ButtonBase className={classes.image}>
+          <Grid item xs={12} md={7} className={classes.imageBox} mr={-1}>
+            <div className={classes.image}>
               <img className={classes.img} src={imageSrc} alt="card" />
-            </ButtonBase>
+            </div>
           </Grid>
-          <Grid item xs={12} md={5} container spacing={2}>
+          <Grid item xs={12} md={5} container spacing={2} ml={-1} mt={{ md: .8 }} mb={2}>
             <Grid item xs container direction="column" spacing={2}>
               <Grid item xs>
-                <Typography gutterBottom variant="h4" component="h2" style={{ fontWeight: 'bold', }}>
+                <Typography gutterBottom variant="h4" component="h2" sx={{ fontWeight: 'bold', }}>
                   {title}
                 </Typography>
                 <Typography variant="body1" gutterBottom>
@@ -44,12 +43,12 @@ const ProjectCard = ({ props, project, techStack }) => {
               <Grid item xs>
                 <ThemeProvider theme={theme}>
                   <ExternalLink href={live}>
-                    <StyledButton className={classes.techStack} endIcon={<VisibilityIcon />}>
+                    <StyledButton className={classes.sourceLink} endIcon={<VisibilityIcon />}>
                       See Live
                     </StyledButton>
                   </ExternalLink>
                   <ExternalLink href={github}>
-                    <StyledButton className={classes.techStack} endIcon={<GitHubIcon />}>
+                    <StyledButton className={classes.sourceLink} endIcon={<GitHubIcon />}>
                       Source
                     </StyledButton>
                   </ExternalLink>
