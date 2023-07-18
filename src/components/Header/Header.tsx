@@ -95,7 +95,7 @@ const Header: React.FC = ({ props }: IComponentProps) => {
 
   return (
     <div className={classes.root}>
-      <ElevationScroll props>
+      <ElevationScroll>
         <AppBar className={classes.appBar} sx={{ backgroundColor: 'white' }}>
           {mobileView ? displayMobile() : displayDesktop()}
         </AppBar>

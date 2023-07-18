@@ -14,7 +14,7 @@ const ContactForm: React.FC = ({ props }: IComponentProps) => {
 
   const classes = useStyles(props);
 
-  const handleServerResponse = (ok: boolean, msg: string, form: any) => {
+  const handleServerResponse = (ok: boolean, msg: string, form: EventTarget & HTMLFormElement) => {
     setServerState({
       submitting: false,
       status: { ok, msg } as const,
