@@ -20,9 +20,9 @@ const ProjectCard = ({ props, project, techStack }: IProjectCardProps) => {
       <Paper className={classes.paper}>
         <Grid container spacing={2}>
           <Grid item xs={12} md={7} className={classes.imageBox} mr={-1}>
-            <div className={classes.image}>
+            <>
               <img className={classes.img} src={imageSrc} alt="card" />
-            </div>
+            </>
           </Grid>
           <Grid item xs={12} md={5} container spacing={2} ml={-1} mt={{ md: .8 }} mb={2}>
             <Grid item xs container direction="column" spacing={2}>

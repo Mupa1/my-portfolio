@@ -1,6 +1,7 @@
+import { type Theme } from '@mui/material';
 import { makeStyles } from '@mui/styles';
 
-const useStyles = makeStyles((theme: any) => ({
+const useStyles = makeStyles<Theme>((theme: Theme) => ({
   root: {
     flexGrow: 1,
     padding: '50px 50px',
