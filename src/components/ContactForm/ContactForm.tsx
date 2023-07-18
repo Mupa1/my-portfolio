@@ -1,4 +1,3 @@
-/* eslint-disable comma-dangle */
 /* eslint-disable max-len */
 import { useState } from 'react';
 import { Typography } from '@mui/material';
@@ -18,7 +17,7 @@ const ContactForm: React.FC = ({ props }: IComponentProps) => {
   const handleServerResponse = (ok: boolean, msg: string, form: any) => {
     setServerState({
       submitting: false,
-      status: { ok, msg } as any,
+      status: { ok, msg } as const,
     });
     if (ok) {
       form.reset();

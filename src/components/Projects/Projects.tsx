@@ -4,13 +4,13 @@ import { Button } from '@mui/material';
 import { useStyles } from './Projects.styles';
 import { projectsData } from '../../data';
 import ProjectCard from '../ProjectCard/ProjectCard';
-import { IComponentProps, ITechStack, ITechs } from '../../entities/types';
+import { IComponentProps, ITechStack } from '../../entities/types';
 
 const Projects: React.FC = ({ props }: IComponentProps) => {
   const classes = useStyles(props);
 
-  const getTechStacks = (techStack: ITechStack) =>
-    techStack.map((techs: ITechs) => (
+  const getTechStacks = (techStack: ITechStack[]) =>
+    techStack.map((techs) => (
       <Button disabled className={classes.techStack} key={uuidv4()}>
         {techs.tech}
       </Button>

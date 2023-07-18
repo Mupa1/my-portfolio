@@ -1,20 +1,25 @@
+import { ReactElement } from "react";
+
 export interface IComponentProps {
-  props?: () => {};
+  props?: () => void;
+}
+
+interface IStatus {
+  ok: boolean;
+  msg: string;
 }
 
 export interface IServerState {
   submitting: boolean;
-  status?: any;
+  status?: IStatus | null;
 }
 
-export interface ITechs {
+export interface ITechStack {
   tech: string,
 }
 
-export interface ITechStack extends Array<ITechs>{}
-
 export interface IProjectCardProps extends IComponentProps {
-  techStack: any;
+  techStack: Array<ReactElement>;
   project: {
     imageSrc: string;
     title: string;
