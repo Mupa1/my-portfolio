@@ -1,5 +1,3 @@
-/* eslint-disable comma-dangle */
-import PropTypes from 'prop-types';
 import { ExternalLink } from 'react-external-link';
 import GitHubIcon from '@mui/icons-material/GitHub';
 import VisibilityIcon from '@mui/icons-material/Visibility';
@@ -9,8 +7,9 @@ import {
 import { ThemeProvider } from '@mui/material/styles';
 import useStyles from './ProjectCard.styles';
 import { StyledButton, theme } from '../StyledButton/StyledButton';
+import { IProjectCardProps } from '../../entities/types';
 
-const ProjectCard = ({ props, project, techStack }) => {
+const ProjectCard = ({ props, project, techStack }: IProjectCardProps) => {
   const {
     imageSrc, title, description, live, github,
   } = project;
@@ -60,22 +59,6 @@ const ProjectCard = ({ props, project, techStack }) => {
       </Paper>
     </article>
   );
-};
-
-ProjectCard.defaultProps = {
-  props: () => { },
-};
-
-ProjectCard.propTypes = {
-  props: PropTypes.func,
-  techStack: PropTypes.instanceOf(Object).isRequired,
-  project: PropTypes.shape({
-    imageSrc: PropTypes.string,
-    title: PropTypes.string,
-    description: PropTypes.string,
-    live: PropTypes.string,
-    github: PropTypes.string,
-  }).isRequired,
 };
 
 export default ProjectCard;

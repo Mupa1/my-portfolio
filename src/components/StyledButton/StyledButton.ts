@@ -10,7 +10,7 @@ export const StyledButton = styled(Button)({
     fontSize: '1em',
     padding: '7px 10px',
   },
-});
+}) as typeof Button;
 
 export const theme = createTheme({
   components: {

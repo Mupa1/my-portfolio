@@ -1,9 +1,10 @@
-import PropTypes from 'prop-types';
+import React from 'react';
 import useStyles from './Footer.styles';
 import About from '../About/About';
 import ContactForm from '../ContactForm/ContactForm';
+import { IComponentProps } from '../../entities/types';
 
-const Footer = ({ props }) => {
+const Footer: React.FC = ({ props }: IComponentProps) => {
   const classes = useStyles(props);
 
   return (
@@ -12,14 +13,6 @@ const Footer = ({ props }) => {
       <ContactForm />
     </section>
   );
-};
-
-Footer.defaultProps = {
-  props: () => {},
-};
-
-Footer.propTypes = {
-  props: PropTypes.func,
 };
 
 export default Footer;

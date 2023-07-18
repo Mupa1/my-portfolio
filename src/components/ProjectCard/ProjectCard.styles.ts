@@ -1,19 +1,10 @@
+import { Theme } from '@mui/material';
 import { makeStyles } from '@mui/styles';
 
-const useStyles = makeStyles(theme => ({
+const useStyles = makeStyles<Theme>((theme: Theme) => ({
   root: {
     flexGrow: 1,
     padding: '50px 50px 0 50px',
-    // '& .MuiButtonBase-root': {
-    //   marginRight: '5px',
-    //   border: '1px solid #7F8CFF',
-    //   color: '#4053FC',
-    //   '&:hover': {
-    //     backgroundColor: '#6070FF',
-    //     color: '#fff',
-    //     boxShadow: '0 8px 16px rgba(64, 83, 252, 0.24)',
-    //   },
-    // },
     '@media (max-width: 480px)': {
       padding: '10px 10px 0 10px',
     },

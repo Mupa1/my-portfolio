@@ -1,11 +1,11 @@
-import PropTypes from 'prop-types';
 import Header from '../Header/Header';
 import Portfolio from '../Projects/Projects';
 import Landing from '../Landing/Landing';
 import useStyles from './Home.styles';
 import Footer from '../Footer/Footer';
+import { IComponentProps } from '../../entities/types';
 
-const Home = ({ props }) => {
+const Home: React.FC = ({ props }: IComponentProps) => {
   const classes = useStyles(props);
 
   return (
@@ -16,14 +16,6 @@ const Home = ({ props }) => {
       <Footer />
     </section>
   );
-};
-
-Home.defaultProps = {
-  props: () => {},
-};
-
-Home.propTypes = {
-  props: PropTypes.func,
 };
 
 export default Home;
