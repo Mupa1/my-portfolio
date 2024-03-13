@@ -42,7 +42,6 @@ const useStyles = makeStyles(() => ({
     '&:hover': {
       color: '#6070ff',
       backgroundColor: '#fff',
-      fontWeight: 700,
     },
   },
   toolbar: {

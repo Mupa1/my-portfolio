@@ -1,14 +1,12 @@
 import { useState, useEffect } from 'react';
+import { Link } from 'react-router-dom';
 import { AppBar, Toolbar, IconButton, Drawer, MenuItem } from '@mui/material';
 import MenuIcon from '@mui/icons-material/Menu';
-import Scroll from 'react-scroll';
 import ElevationScroll from '../ElevationScroll';
 import { headersData } from '../../data';
 import logo from '../../assets/logo2.png';
 import useStyles from './Header.styles';
 import { IComponentProps } from '../../entities/types';
-
-const { Link } = Scroll;
 
 const Header: React.FC = ({ props }: IComponentProps) => {
   const classes = useStyles(props);
@@ -34,10 +32,6 @@ const Header: React.FC = ({ props }: IComponentProps) => {
       <Link
         key={label}
         to={href}
-        spy
-        smooth
-        offset={-70}
-        duration={500}
         className={`${classes.menuButton} ${classes.menuButtonDesktop}`}
       >
         {label}
@@ -46,7 +40,9 @@ const Header: React.FC = ({ props }: IComponentProps) => {
 
   const displayDesktop = () => (
     <Toolbar className={classes.toolbar}>
-      <img src={logo} alt='Logo' />
+      <Link to='/'>
+        <img src={logo} alt='Logo' />
+      </Link>
       <div>{getMenuButtons()}</div>
     </Toolbar>
   );
@@ -54,14 +50,7 @@ const Header: React.FC = ({ props }: IComponentProps) => {
   const getDrawerChoices = () =>
     headersData.map(({ label, href }) => (
       <MenuItem key={label} className={classes.munuItem}>
-        <Link
-          to={href}
-          spy
-          smooth
-          offset={-70}
-          duration={500}
-          className={classes.menuButton}
-        >
+        <Link to={href} className={classes.menuButton}>
           {label}
         </Link>
       </MenuItem>
@@ -76,7 +65,9 @@ const Header: React.FC = ({ props }: IComponentProps) => {
     return (
       <Toolbar>
         <div className={classes.logoBox}>
-          <img src={logo} alt='Logo' className={classes.logo} />
+          <Link to='/'>
+            <img src={logo} alt='Logo' className={classes.logo} />
+          </Link>
           <IconButton
             edge='end'
             arial-label='menu'

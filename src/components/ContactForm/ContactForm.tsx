@@ -81,7 +81,7 @@ const ContactForm: React.FC = ({ props }: IComponentProps) => {
   );
 
   return (
-    <footer className={classes.root} id='contact'>
+    <footer className={classes.root}>
       <article className={classes.formContainer}>
         <Typography
           gutterBottom

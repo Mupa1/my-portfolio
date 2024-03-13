@@ -1,8 +1,8 @@
-import Header from '../Header/Header';
-import Portfolio from '../Projects/Projects';
-import Landing from '../Landing/Landing';
+import Portfolio from '../../components/Projects/Projects';
+import Landing from '../../components/Landing/Landing';
+import About from '../../components/About/About';
+import Footer from '../../components/Footer/Footer';
 import useStyles from './Home.styles';
-import Footer from '../Footer/Footer';
 import { IComponentProps } from '../../entities/types';
 
 const Home: React.FC = ({ props }: IComponentProps) => {
@@ -10,9 +10,9 @@ const Home: React.FC = ({ props }: IComponentProps) => {
 
   return (
     <section className={classes.root}>
-      <Header />
       <Landing />
       <Portfolio />
+      <About />
       <Footer />
     </section>
   );

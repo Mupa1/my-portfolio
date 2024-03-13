@@ -6,16 +6,12 @@ import eshop from '../assets/eshop.png';
 
 export const headersData = [
   {
-    label: 'Projects',
-    href: 'projects',
+    label: 'Portfolio',
+    href: '/',
   },
   {
-    label: 'About',
-    href: 'about',
-  },
-  {
-    label: 'Contact',
-    href: 'contact',
+    label: 'Resume',
+    href: '/resume',
   },
 ];
 
@@ -65,10 +61,12 @@ export const projectsData = [
 export const skillsAndTech = [
   {
     title: 'Skills',
-    description: 'Web Development - Semantic HTML - Responsive Design - DOM manipulation - OOP - MVC - RESTful APIs - TDD - Unit Testing - Refactoring - Deployment - Relational Databases - Version Control - Git Flow - Pair Programming - Wireframing',
+    description:
+      'Frontend Development - Semantic HTML - Responsive Design - Accessibility - SEO - DOM Manipulation - TDD - Unit Testing - Refactoring - Deployment - Relational Databases - Version Control - Git Flow - Pair Programming - Adaptability - Communication - Problem Solving - Collaboration - Time Management',
   },
   {
     title: 'Technology',
-    description: 'HTML5 - CSS3 - SCSS - JavaScript - TypeScript - React - Redux - Next.js - Material UI - Bootstrap - Ruby - Ruby on Rails - PostgreSQL - MySQL - Node.js - Express - RSpec - Jest - REST APIs - Webpack - NPM - Git - Figma',
+    description:
+      'HTML5 - CSS3 - SCSS - JavaScript - TypeScript - React - Redux - Next.js - GraphQL - RESTful APIs - Jest - React Testing Library - TailwindCSS - Styled Components - Material UI - Bootstrap - Node.js - Express - Webpack - NPM - Git',
   },
 ];

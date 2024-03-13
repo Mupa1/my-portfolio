@@ -3,6 +3,8 @@ import { makeStyles } from '@mui/styles';
 
 const useStyles = makeStyles<Theme>((theme: Theme) => ({
   root: {
+    maxWidth: '1440px',
+    margin: 'auto',
     flexGrow: 1,
     padding: '50px 50px 0 50px',
     '@media (max-width: 480px)': {

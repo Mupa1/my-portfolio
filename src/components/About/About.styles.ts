@@ -4,14 +4,21 @@ import { makeStyles } from '@mui/styles';
 const useStyles = makeStyles<Theme>((theme: Theme) => ({
   root: {
     flexGrow: 1,
-    padding: '50px 50px',
-    '@media (max-width: 480px)': {
-      padding: '10px 10px',
-    },
+    backgroundColor: 'white',
   },
   paper: {
     padding: theme.spacing(2),
     margin: 'auto',
+    maxWidth: '1440px',
+  },
+  details: {
+    padding: 0,
+    '@media (max-width: 1440px)': {
+      padding: '0 32px',
+    },
+    '@media (max-width: 900px)': {
+      padding: '0 15px',
+    },
   },
 }));
 
