@@ -38,10 +38,15 @@ const Header: React.FC = ({ props }: IComponentProps) => {
       </Link>
     ));
 
+  const handleDrawerOpen = () =>
+    setView((prevState) => ({ ...prevState, drawerOpen: true }));
+  const handleDrawerClose = () =>
+    setView((prevState) => ({ ...prevState, drawerOpen: false }));
+
   const displayDesktop = () => (
     <Toolbar className={classes.toolbar}>
       <Link to='/'>
-        <img src={logo} alt='Logo' />
+        <img src={logo} alt='Logo' className={classes.logo} />
       </Link>
       <div>{getMenuButtons()}</div>
     </Toolbar>
@@ -49,7 +54,11 @@ const Header: React.FC = ({ props }: IComponentProps) => {
 
   const getDrawerChoices = () =>
     headersData.map(({ label, href }) => (
-      <MenuItem key={label} className={classes.munuItem}>
+      <MenuItem
+        key={label}
+        className={classes.munuItem}
+        onClick={handleDrawerClose}
+      >
         <Link to={href} className={classes.menuButton}>
           {label}
         </Link>
@@ -57,11 +66,6 @@ const Header: React.FC = ({ props }: IComponentProps) => {
     ));
 
   const displayMobile = () => {
-    const handleDrawerOpen = () =>
-      setView((prevState) => ({ ...prevState, drawerOpen: true }));
-    const handleDrawerClose = () =>
-      setView((prevState) => ({ ...prevState, drawerOpen: false }));
-
     return (
       <Toolbar>
         <div className={classes.logoBox}>
@@ -74,11 +78,11 @@ const Header: React.FC = ({ props }: IComponentProps) => {
             aria-haspopup='true'
             onClick={handleDrawerOpen}
           >
-            <MenuIcon fontSize='large' />
+            <MenuIcon fontSize='medium' />
           </IconButton>
         </div>
         <Drawer anchor='left' open={drawerOpen} onClose={handleDrawerClose}>
-          <div className={classes.drawerContainer}>{getDrawerChoices()}</div>
+          <div>{getDrawerChoices()}</div>
         </Drawer>
       </Toolbar>
     );

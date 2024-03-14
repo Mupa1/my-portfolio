@@ -1,7 +1,7 @@
 import { useState, useEffect, useCallback } from 'react';
 import { useResizeObserver } from '@wojtekmaj/react-hooks';
 import { Document, Page, pdfjs } from 'react-pdf';
-import DownloadForOfflineIcon from '@mui/icons-material/DownloadForOffline';
+import DownloadIcon from '@mui/icons-material/Download';
 import { IconButton, Tooltip } from '@mui/material';
 import { IComponentProps } from '../../entities/types';
 import useStyles from './Resume.styles';
@@ -40,19 +40,23 @@ const Resume: React.FC = ({ props }: IComponentProps) => {
   return (
     <section className={classes.root} ref={setContainerRef}>
       {showDownloadButton && (
-        <Tooltip title='Download' placement='left'>
+        <Tooltip title='Download' placement='bottom'>
           <a
             href='./resume.pdf'
             download='MupaNzaphilaResume.pdf'
             className={classes.download}
           >
             <IconButton arial-label='download'>
-              <DownloadForOfflineIcon fontSize='large' />
+              <DownloadIcon fontSize='medium' />
             </IconButton>
           </a>
         </Tooltip>
       )}
-      <Document file='./resume.pdf' onLoadSuccess={handleOnLoadSuccess}>
+      <Document
+        className={classes.document}
+        file='./resume.pdf'
+        onLoadSuccess={handleOnLoadSuccess}
+      >
         <Page
           pageNumber={1}
           width={containerWidth ? Math.min(containerWidth, maxWidth) : maxWidth}
