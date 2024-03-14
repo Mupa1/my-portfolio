@@ -27,9 +27,7 @@ const Projects: React.FC = ({ props }: IComponentProps) => {
 
   return (
     <section className={classes.root}>
-      <Element name='projects'>
-        <>{getProjectDetails()}</>
-      </Element>
+      <>{getProjectDetails()}</>
     </section>
   );
 };

@@ -1,6 +1,5 @@
 /* eslint-disable max-len */
 import { v4 as uuidv4 } from 'uuid';
-import { Link } from 'react-router-dom';
 import { ThemeProvider } from '@mui/material';
 import { Grid, Paper, Typography } from '@mui/material';
 import { skillsAndTech } from '../../data';
@@ -61,11 +60,11 @@ const About: React.FC = ({ props }: IComponentProps) => {
             </Typography>
             <SocialIcons />
             <ThemeProvider theme={theme}>
-              <Link to='/resume'>
-                <StyledButton>
-                  Resume
+              <a href='./resume.pdf' download='MupaNzaphilaResume.pdf'>
+                <StyledButton arial-label='download'>
+                  Download Resume
                 </StyledButton>
-              </Link>
+              </a>
             </ThemeProvider>
           </Grid>
           <Grid item xs={12} md={6} container spacing={2} direction='column'>

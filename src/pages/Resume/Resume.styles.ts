@@ -11,12 +11,10 @@ const useStyles = makeStyles(() => ({
     minHeight: '100vh',
   },
   download: {
-    paddingTop: '12px',
     position: 'absolute',
-    top: 0,
+    top: 3,
     zIndex: 1000,
   },
-  pdf: {},
 }));
 
 export default useStyles;
