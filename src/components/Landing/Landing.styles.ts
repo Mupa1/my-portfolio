@@ -10,14 +10,15 @@ const useStyles = makeStyles(() => ({
     color: '#344563',
     backgroundColor: '#fff',
     backgroundImage: `url(${landingBg})`,
-    height: 'calc(100vh - 64px)',
+    height: 'calc(100vh - 54px)',
     backgroundSize: 'cover',
     backgroundRepeat: 'no-repeat',
     borderBottomLeftRadius: '80px',
     padding: '15px',
   },
   landingInfo: {
-    padding: '0 200px',
+    maxWidth: '1440px',
+    padding: '0 220px',
 
     '@media (max-width: 900px)': {
       padding: '0 10px',

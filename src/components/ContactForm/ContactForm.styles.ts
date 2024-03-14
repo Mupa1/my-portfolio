@@ -10,7 +10,7 @@ const useStyles = makeStyles(() => ({
     backgroundSize: 'cover',
     backgroundRepeat: 'no-repeat',
     borderTopLeftRadius: '80px',
-    padding: '50px 0',
+    padding: '50px 15px',
     '@media (max-width: 900px)': {
       height: 'auto',
     },
@@ -23,15 +23,15 @@ const useStyles = makeStyles(() => ({
         color: '#fff',
         boxShadow: '0 8px 16px rgba(64, 83, 252, 0.24)',
       },
-    }
+    },
   },
   formContainer: {
     maxWidth: '447px',
     margin: '10px auto',
-    padding: '10px',
   },
   text: {
     margin: 'auto',
+    padding: '0 10px',
   },
   fields: {
     width: '90%',
@@ -41,16 +41,16 @@ const useStyles = makeStyles(() => ({
     border: '1px solid #cfd8dc',
     margin: '10px 0',
     resize: 'none',
-    '&::placeholder': { /* Chrome, Firefox, Opera, Safari 10.1+ */
-      color: '#cfd8dc',
+    '&::placeholder': {
+      /* Chrome, Firefox, Opera, Safari 10.1+ */ color: '#cfd8dc',
       fontFamily: "'Roboto', sans-serif",
     },
-    '&:-ms-input-placeholder': { /* Internet Explorer 10-11 */
-      color: '#cfd8dc',
+    '&:-ms-input-placeholder': {
+      /* Internet Explorer 10-11 */ color: '#cfd8dc',
       fontFamily: "'Roboto', sans-serif",
     },
-    '&::-ms-input-placeholder': { /* Microsoft Edge */
-      color: '#cfd8dc',
+    '&::-ms-input-placeholder': {
+      /* Microsoft Edge */ color: '#cfd8dc',
       fontFamily: "'Roboto', sans-serif",
     },
   },

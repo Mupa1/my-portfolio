@@ -1,6 +1,5 @@
 /* eslint-disable max-len */
 import { v4 as uuidv4 } from 'uuid';
-import { ExternalLink } from 'react-external-link';
 import { ThemeProvider } from '@mui/material';
 import { Grid, Paper, Typography } from '@mui/material';
 import { skillsAndTech } from '../../data';
@@ -30,13 +29,13 @@ const About: React.FC = ({ props }: IComponentProps) => {
     ));
 
   return (
-    <article className={classes.root} id='about'>
+    <article className={classes.root}>
       <Paper
         className={classes.paper}
         elevation={0}
         sx={{ borderTopRightRadius: '80px' }}
       >
-        <Grid container spacing={2}>
+        <Grid container spacing={2} className={classes.details}>
           <Grid item xs={12} md={6}>
             <Typography
               gutterBottom
@@ -48,21 +47,24 @@ const About: React.FC = ({ props }: IComponentProps) => {
             </Typography>
             <Typography variant='body1' gutterBottom>
               {' '}
-              I am a self-taught full-stack developer with an inclination to
-              frontend development and a background in graphic design.
+              I am a dedicated and detail-oriented frontend developer with
+              3years of professional experience. I&apos;m Passionate about
+              building engaging user interfaces.
               <br />
-              I have always been fascinated by software&apos;s potentials as a
-              designer. So I learned web development by building multiple
-              websites and web applications.
+              I&apos;ve a proven record of collaboration in cross-functional
+              teams and working independently to develop exceptional web
+              applications.
               <br />
-              Currently, I am looking for a position as a frontend engineer, joining an
-              experienced team and contribute to building great products.{' '}
+              Specialized in React, Redux, HTML, CSS, JavaScript and TypeScript
+              and open to new opportunities.
             </Typography>
             <SocialIcons />
             <ThemeProvider theme={theme}>
-              <ExternalLink href='https://docs.google.com/document/d/1oxxxVT-Vl2mcb0P8pg_EK_0UnQU_FIuZqdYFDq14hQA/edit'>
-                <StyledButton>Get My Resume</StyledButton>
-              </ExternalLink>
+              <a href='./resume.pdf' download='MupaNzaphilaResume.pdf'>
+                <StyledButton arial-label='download'>
+                  Download Resume
+                </StyledButton>
+              </a>
             </ThemeProvider>
           </Grid>
           <Grid item xs={12} md={6} container spacing={2} direction='column'>

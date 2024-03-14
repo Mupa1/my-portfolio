@@ -1,14 +1,18 @@
-import { ThemeProvider, createTheme, responsiveFontSizes, StyledEngineProvider } from '@mui/material/styles';
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
-import Home from './components/Home/Home';
+import {
+  ThemeProvider,
+  createTheme,
+  responsiveFontSizes,
+  StyledEngineProvider,
+} from '@mui/material/styles';
+import Header from './components/Header/Header';
+import Home from './pages/Home/Home';
+import Resume from './pages/Resume/Resume';
 
 const App = () => {
   let theme = createTheme({
     typography: {
-      fontFamily: [
-        'Poppins',
-        'sans-serif',
-      ].join(','),
+      fontFamily: ['Poppins', 'sans-serif'].join(','),
     },
   });
   theme = responsiveFontSizes(theme);
@@ -16,10 +20,12 @@ const App = () => {
   return (
     <StyledEngineProvider injectFirst>
       <ThemeProvider theme={theme}>
-        <div className="App">
+        <div className='App'>
           <BrowserRouter>
+            <Header />
             <Routes>
-              <Route path="/" element={<Home />} />
+              <Route path='/resume' element={<Resume />} />
+              <Route path='/' element={<Home />} />
             </Routes>
           </BrowserRouter>
         </div>

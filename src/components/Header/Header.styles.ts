@@ -7,6 +7,8 @@ const useStyles = makeStyles(() => ({
     backgroundColor: '#fff',
   },
   appBar: {
+    display: 'flex',
+    justifyContent: 'center',
     margin: 'auto',
     color: '#344563',
     backgroundColor: '#fff',
@@ -20,10 +22,19 @@ const useStyles = makeStyles(() => ({
     display: 'flex',
     justifyContent: 'space-between',
     width: '100%',
+    '& a': {
+      display: 'flex',
+      justifyContent: 'center',
+      alignItems: 'center',
+    },
   },
   logo: {
-    width: '64px',
-    height: '64px',
+    width: '48px',
+    height: '48px',
+    '@media (max-width: 900px)': {
+      width: '32px',
+      height: '32px',
+    },
   },
   munuItem: {
     '&:hover': {
@@ -42,16 +53,11 @@ const useStyles = makeStyles(() => ({
     '&:hover': {
       color: '#6070ff',
       backgroundColor: '#fff',
-      fontWeight: 700,
     },
   },
   toolbar: {
     display: 'flex',
     justifyContent: 'space-between',
-  },
-  drawerContainer: {
-    paddingRight: '100px',
-    width: '80%',
   },
 }));
 

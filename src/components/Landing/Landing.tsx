@@ -20,14 +20,17 @@ const Landing: React.FC = ({ props }: IComponentProps) => {
           <br /> I&apos;m Mupa
         </Typography>
         <Typography variant='h6' component='h2'>
-          I&apos;m a frontend engineer
+          I&apos;m a frontend developer,
         </Typography>
         <Typography variant='body1' gutterBottom>
-          {' '}
-          I enjoy building beautiful, user-friendly websites and web
-          applications. Look through some of my work and experiences! If you
-          like what you see and have a project you need to be coded, don&apos;t
-          hesitate to contact me.{' '}
+          dedicated, self-driven and detail-oriented
+          with extensive experience building user-facing applications.
+          <br />
+          I enjoy building beautiful, engaging, and user-friendly user interfaces.
+          Look through some of my work and experiences!
+          <br />
+          If you like what you see and have a project you need to be coded,
+          don&apos;t hesitate to contact me.
         </Typography>
         <SocialIcons />
       </article>

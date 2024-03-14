@@ -1,14 +1,12 @@
 import { useState, useEffect } from 'react';
+import { Link } from 'react-router-dom';
 import { AppBar, Toolbar, IconButton, Drawer, MenuItem } from '@mui/material';
 import MenuIcon from '@mui/icons-material/Menu';
-import Scroll from 'react-scroll';
 import ElevationScroll from '../ElevationScroll';
 import { headersData } from '../../data';
 import logo from '../../assets/logo2.png';
 import useStyles from './Header.styles';
 import { IComponentProps } from '../../entities/types';
-
-const { Link } = Scroll;
 
 const Header: React.FC = ({ props }: IComponentProps) => {
   const classes = useStyles(props);
@@ -34,60 +32,57 @@ const Header: React.FC = ({ props }: IComponentProps) => {
       <Link
         key={label}
         to={href}
-        spy
-        smooth
-        offset={-70}
-        duration={500}
         className={`${classes.menuButton} ${classes.menuButtonDesktop}`}
       >
         {label}
       </Link>
     ));
 
+  const handleDrawerOpen = () =>
+    setView((prevState) => ({ ...prevState, drawerOpen: true }));
+  const handleDrawerClose = () =>
+    setView((prevState) => ({ ...prevState, drawerOpen: false }));
+
   const displayDesktop = () => (
     <Toolbar className={classes.toolbar}>
-      <img src={logo} alt='Logo' />
+      <Link to='/'>
+        <img src={logo} alt='Logo' className={classes.logo} />
+      </Link>
       <div>{getMenuButtons()}</div>
     </Toolbar>
   );
 
   const getDrawerChoices = () =>
     headersData.map(({ label, href }) => (
-      <MenuItem key={label} className={classes.munuItem}>
-        <Link
-          to={href}
-          spy
-          smooth
-          offset={-70}
-          duration={500}
-          className={classes.menuButton}
-        >
+      <MenuItem
+        key={label}
+        className={classes.munuItem}
+        onClick={handleDrawerClose}
+      >
+        <Link to={href} className={classes.menuButton}>
           {label}
         </Link>
       </MenuItem>
     ));
 
   const displayMobile = () => {
-    const handleDrawerOpen = () =>
-      setView((prevState) => ({ ...prevState, drawerOpen: true }));
-    const handleDrawerClose = () =>
-      setView((prevState) => ({ ...prevState, drawerOpen: false }));
-
     return (
       <Toolbar>
         <div className={classes.logoBox}>
-          <img src={logo} alt='Logo' className={classes.logo} />
+          <Link to='/'>
+            <img src={logo} alt='Logo' className={classes.logo} />
+          </Link>
           <IconButton
             edge='end'
             arial-label='menu'
             aria-haspopup='true'
             onClick={handleDrawerOpen}
           >
-            <MenuIcon fontSize='large' />
+            <MenuIcon fontSize='medium' />
           </IconButton>
         </div>
         <Drawer anchor='left' open={drawerOpen} onClose={handleDrawerClose}>
-          <div className={classes.drawerContainer}>{getDrawerChoices()}</div>
+          <div>{getDrawerChoices()}</div>
         </Drawer>
       </Toolbar>
     );

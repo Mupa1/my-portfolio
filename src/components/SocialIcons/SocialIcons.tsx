@@ -21,7 +21,7 @@ const SocialIcons: React.FC = ({ props }: IComponentProps) => {
     },
     {
       icon: <LinkedInIcon />,
-      href: 'https://www.linkedin.com/in/mupa-mmbetsa',
+      href: 'https://www.linkedin.com/in/mupa-nzaphila',
     },
   ];
 
