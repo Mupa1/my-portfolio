@@ -14,7 +14,7 @@ const useStyles = makeStyles<Theme>((theme: Theme) => ({
   details: {
     padding: 0,
     '@media (max-width: 1440px)': {
-      padding: '0 32px',
+      padding: '0 89px',
     },
     '@media (max-width: 900px)': {
       padding: '0 15px',
