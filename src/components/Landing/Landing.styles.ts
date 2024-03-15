@@ -17,7 +17,7 @@ const useStyles = makeStyles(() => ({
     padding: '15px',
   },
   landingInfo: {
-    maxWidth: '1440px',
+    maxWidth: '900px',
     padding: '0 220px',
 
     '@media (max-width: 900px)': {

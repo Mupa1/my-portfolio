@@ -10,10 +10,11 @@ const useStyles = makeStyles(() => ({
   },
   download: {
     position: 'fixed',
-    top: 12,
-    right: 60,
+    top: 8,
+    right: 55,
     zIndex: 10000,
     '@media (min-width: 900px)': {
+      top: 12,
       right: 300,
     },
   },

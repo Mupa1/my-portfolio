@@ -24,12 +24,9 @@ const Landing: React.FC = ({ props }: IComponentProps) => {
         </Typography>
         <Typography variant='body1' gutterBottom>
           dedicated, self-driven and detail-oriented
-          with extensive experience building user-facing applications.
-          <br />
-          I enjoy building beautiful, engaging, and user-friendly user interfaces.
-          Look through some of my work and experiences!
-          <br />
-          If you like what you see and have a project you need to be coded,
+          with extensive experience building user-facing web applications.
+          I enjoy building beautiful, engaging, and user-friendly interfaces.
+          Look through some of my work and experiences! If you like what you see and have a project you need to be coded,
           don&apos;t hesitate to contact me.
         </Typography>
         <SocialIcons />
