@@ -1,25 +1,17 @@
-import PropTypes from 'prop-types';
+import React from 'react';
 import useStyles from './Footer.styles';
-import About from '../About/About';
 import ContactForm from '../ContactForm/ContactForm';
 
-const Footer = ({ props }) => {
+import { IComponentProps } from '../../entities/types';
+
+const Footer: React.FC = ({ props }: IComponentProps) => {
   const classes = useStyles(props);
 
   return (
     <section className={classes.root}>
-      <About />
       <ContactForm />
     </section>
   );
-};
-
-Footer.defaultProps = {
-  props: () => {},
-};
-
-Footer.propTypes = {
-  props: PropTypes.func,
 };
 
 export default Footer;

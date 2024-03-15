@@ -7,18 +7,18 @@ A responsive personal web development portfolio built using react and material U
 
 ## Deployment
 
-[View live here](https://mupa-dev.netlify.app/)
+[View live here](https://mupanzaphila.com/)
 
 ## Built With
 
 - React
 - TypeScript
 - Material UI
+- React Router
 
 ## Author
 
 👤 **Mupa M'mbetsa Nzaphila**
 
 - Github: [@mupa1](https://github.com/Mupa1)
-- Twitter: [@mupa_mmbetsa](https://twitter.com/mupa_mmbetsa)
-- Linkedin: [mupa-mmbetsa](https://www.linkedin.com/in/mupa-mmbetsa)
+- Linkedin: [mupa-mmbetsa](https://www.linkedin.com/in/mupa-nzaphila)

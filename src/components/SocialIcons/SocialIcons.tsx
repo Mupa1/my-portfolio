@@ -1,6 +1,3 @@
-/* eslint-disable comma-dangle */
-/* eslint-disable max-len */
-import PropTypes from 'prop-types';
 import { v4 as uuidv4 } from 'uuid';
 import { Typography } from '@mui/material';
 import { ExternalLink } from 'react-external-link';
@@ -8,8 +5,9 @@ import LinkedInIcon from '@mui/icons-material/LinkedIn';
 import GitHubIcon from '@mui/icons-material/GitHub';
 import TwitterIcon from '@mui/icons-material/Twitter';
 import useStyles from './SocialIcons.styles';
+import { IComponentProps } from '../../entities/types';
 
-const SocialIcons = ({ props }) => {
+const SocialIcons: React.FC = ({ props }: IComponentProps) => {
   const classes = useStyles(props);
 
   const socialIcons = [
@@ -23,7 +21,7 @@ const SocialIcons = ({ props }) => {
     },
     {
       icon: <LinkedInIcon />,
-      href: 'https://www.linkedin.com/in/mupa-mmbetsa',
+      href: 'https://www.linkedin.com/in/mupa-nzaphila',
     },
   ];
 
@@ -41,14 +39,6 @@ const SocialIcons = ({ props }) => {
       <ul>{getSocialIcons()}</ul>
     </>
   );
-};
-
-SocialIcons.defaultProps = {
-  props: () => { },
-};
-
-SocialIcons.propTypes = {
-  props: PropTypes.func,
 };
 
 export default SocialIcons;

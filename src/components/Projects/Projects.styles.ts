@@ -11,7 +11,6 @@ export const useStyles = makeStyles(() => ({
     fontSize: '0.75em',
     borderRadius: '8px',
   },
-
 }));
 
 export default useStyles;
