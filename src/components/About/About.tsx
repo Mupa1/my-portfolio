@@ -1,11 +1,9 @@
 /* eslint-disable max-len */
 import { v4 as uuidv4 } from 'uuid';
-import { ThemeProvider } from '@mui/material';
 import { Grid, Paper, Typography } from '@mui/material';
 import { skillsAndTech } from '../../data';
 import useStyles from './About.styles';
 import SocialIcons from '../SocialIcons/SocialIcons';
-import { StyledButton, theme } from '../StyledButton/StyledButton';
 import { IComponentProps } from '../../entities/types';
 
 const About: React.FC = ({ props }: IComponentProps) => {
@@ -29,7 +27,7 @@ const About: React.FC = ({ props }: IComponentProps) => {
     ));
 
   return (
-    <article className={classes.root}>
+    <article id="about" className={classes.root}>
       <Paper
         className={classes.paper}
         elevation={0}
@@ -59,13 +57,6 @@ const About: React.FC = ({ props }: IComponentProps) => {
               and open to new opportunities.
             </Typography>
             <SocialIcons />
-            <ThemeProvider theme={theme}>
-              <a href='./resume.pdf' download='MupaNzaphilaResume.pdf'>
-                <StyledButton arial-label='download'>
-                  Download Resume
-                </StyledButton>
-              </a>
-            </ThemeProvider>
           </Grid>
           <Grid item xs={12} md={6} container spacing={2} direction='column'>
             {getSkillAndTech()}

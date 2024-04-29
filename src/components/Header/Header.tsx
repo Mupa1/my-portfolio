@@ -1,5 +1,5 @@
 import { useState, useEffect } from 'react';
-import { Link } from 'react-router-dom';
+import Scroll from 'react-scroll';
 import { AppBar, Toolbar, IconButton, Drawer, MenuItem } from '@mui/material';
 import MenuIcon from '@mui/icons-material/Menu';
 import ElevationScroll from '../ElevationScroll';
@@ -10,6 +10,7 @@ import { IComponentProps } from '../../entities/types';
 
 const Header: React.FC = ({ props }: IComponentProps) => {
   const classes = useStyles(props);
+  const { Link } = Scroll;
 
   const [view, setView] = useState({
     mobileView: false,
@@ -32,6 +33,9 @@ const Header: React.FC = ({ props }: IComponentProps) => {
       <Link
         key={label}
         to={href}
+        smooth={true}
+        offset={-50}
+        duration={500}
         className={`${classes.menuButton} ${classes.menuButtonDesktop}`}
       >
         {label}
@@ -59,7 +63,13 @@ const Header: React.FC = ({ props }: IComponentProps) => {
         className={classes.munuItem}
         onClick={handleDrawerClose}
       >
-        <Link to={href} className={classes.menuButton}>
+        <Link
+          to={href}
+          smooth={true}
+          offset={-50}
+          duration={500}
+          className={classes.menuButton}
+        >
           {label}
         </Link>
       </MenuItem>
