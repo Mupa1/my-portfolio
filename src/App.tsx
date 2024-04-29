@@ -7,7 +7,6 @@ import {
 } from '@mui/material/styles';
 import Header from './components/Header/Header';
 import Home from './pages/Home/Home';
-import Resume from './pages/Resume/Resume';
 
 const App = () => {
   let theme = createTheme({
@@ -24,7 +23,6 @@ const App = () => {
           <BrowserRouter>
             <Header />
             <Routes>
-              <Route path='/resume' element={<Resume />} />
               <Route path='/' element={<Home />} />
             </Routes>
           </BrowserRouter>

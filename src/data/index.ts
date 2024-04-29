@@ -6,12 +6,16 @@ import eshop from '../assets/eshop.png';
 
 export const headersData = [
   {
-    label: 'Portfolio',
-    href: '/',
+    label: 'Projects',
+    href: 'projects',
   },
   {
-    label: 'Resume',
-    href: '/resume',
+    label: 'About',
+    href: 'about',
+  },
+  {
+    label: 'Contact',
+    href: 'contact',
   },
 ];
 
