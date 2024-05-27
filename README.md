@@ -7,7 +7,7 @@ A responsive personal web development portfolio built using react and material U
 
 ## Deployment
 
-[View live here](https://mupanzaphila.com/)
+[View live here](https://mupa-dev.netlify.app/)
 
 ## Built With
 
